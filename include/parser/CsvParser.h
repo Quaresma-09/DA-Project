@@ -15,11 +15,9 @@ private:
     std::vector<Reviewer> reviewers;
     Config config;
 
-    // Para validar IDs únicos
     std::unordered_set<int> submissionIds;
     std::unordered_set<int> reviewerIds;
 
-    // Métodos auxiliares
     std::string trim(const std::string& str);
     std::vector<std::string> splitCsvLine(const std::string& line);
     std::string removeComments(const std::string& line);
@@ -27,9 +25,9 @@ private:
 public:
     explicit CsvParser(std::string filename);
 
-    bool parse(); // Retorna false se houver erros críticos
+    bool parse(); // Return false if there are critical errors
 
-    // Getters para o resto da equipa (contrato de interface)
+    // Getters
     const std::vector<Submission>& getSubmissions() const { return submissions; }
     const std::vector<Reviewer>& getReviewers() const { return reviewers; }
     const Config& getConfig() const { return config; }
