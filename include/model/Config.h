@@ -7,8 +7,8 @@ class Config {
 private:
     int minReviewsPerSubmission = 0;
     int maxReviewsPerReviewer = 0;
-    int generateAssignments = 0; // 0, 1, 2, ou 3 [cite: 68-79]
-    int riskAnalysis = 0;        // 0, 1, ou K [cite: 80-85]
+    int generateAssignments = 0;
+    int riskAnalysis = 0;
     std::string outputFileName = "output.csv"; // Default
 
 public:
@@ -21,7 +21,7 @@ public:
     int getRiskAnalysis() const { return riskAnalysis; }
     std::string getOutputFileName() const { return outputFileName; }
 
-    // Setters (para o parser preencher)
+    // Setters
     void setMinReviewsPerSubmission(int val) { minReviewsPerSubmission = val; }
     void setMaxReviewsPerReviewer(int val) { maxReviewsPerReviewer = val; }
     void setGenerateAssignments(int val) { generateAssignments = val; }

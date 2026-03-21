@@ -10,14 +10,14 @@ private:
     std::string authors;
     std::string email;
     int primaryTopic;
-    int secondaryTopic; // Usaremos -1 ou 0 para indicar que não existe
+    int secondaryTopic; //-1 ou 0 if it doesn't exist
 
 public:
     Submission(int id, std::string title, std::string authors, std::string email, int primaryTopic, int secondaryTopic = -1)
         : id(id), title(std::move(title)), authors(std::move(authors)), email(std::move(email)),
           primaryTopic(primaryTopic), secondaryTopic(secondaryTopic) {}
 
-    // Getters para o M2 e M3
+    // Getters
     int getId() const { return id; }
     std::string getTitle() const { return title; }
     std::string getAuthors() const { return authors; }

@@ -9,7 +9,7 @@ private:
     std::string name;
     std::string email;
     int primaryExpertise;
-    int secondaryExpertise; // Usaremos -1 ou 0 para indicar que não existe
+    int secondaryExpertise; //-1 ou 0 if it doesn't exist
 
 public:
     Reviewer(int id, std::string name, std::string email, int primaryExpertise, int secondaryExpertise = -1)
