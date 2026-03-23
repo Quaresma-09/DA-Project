@@ -1,12 +1,14 @@
 #include <iostream>
-#include "../include/parser/CsvParser.h"
-#include "../include/graph/Graph.h"
+#include "parser/CsvParser.h"
+#include "graph/Graph.h"
+#include "graph/MaxFlow.h"
+#include "core/AssignmentEngine.h"
 
 int main() {
     std::cout << "=== Integration Test: Graph (M1 + M2) ===\n\n";
 
     // 1. Initialize your Parser (M1) and read the input file
-    std::string filePath = "../data/input/input.csv";
+    std::string filePath = "data/input/input.csv";
     CsvParser parser(filePath);
 
     if (!parser.parse()) {
@@ -49,6 +51,36 @@ int main() {
 
     std::cout << "\nThe graph currently has " << myGraph.size() << " nodes allocated in memory.\n";
     std::cout << "Your data structures and parser fit perfectly with M2's code!\n";
+
+    std::cout << "\n=== MaxFlow Test ===\n";
+
+    Graph testGraph(4);
+
+    testGraph.addEdge(0, 1, 10);
+    testGraph.addEdge(0, 2, 5);
+    testGraph.addEdge(1, 3, 10);
+    testGraph.addEdge(2, 3, 5);
+
+    MaxFlow maxFlow;
+    int result = maxFlow.edmondsKarp(testGraph, 0, 3);
+
+    std::cout << "Maximum flow: " << result << '\n';
+
+    std::cout << "\n=== AssignmentEngine Test ===\n";
+
+    AssignmentEngine engine(submissions, reviewers, config);
+
+    int flow = engine.solveBaseAssignment();
+    int required = engine.getRequiredFlow();
+
+    std::cout << "Computed flow: " << flow << '\n';
+    std::cout << "Required flow: " << required << '\n';
+
+    if (engine.hasValidAssignment()) {
+        std::cout << "Valid assignment exists.\n";
+    } else {
+        std::cout << "No valid assignment possible.\n";
+    }
 
     return 0;
 }

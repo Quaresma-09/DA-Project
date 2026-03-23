@@ -41,3 +41,10 @@
 *.dwo
 
 .idea/
+
+# macOS
+.DS_Store
+
+# executáveis
+run
+*.out
