@@ -1,12 +1,13 @@
 #include <iostream>
 #include "../include/parser/CsvParser.h"
 #include "../include/graph/Graph.h"
+#include "../include/graph/MaxFlow.h"
 
 int main() {
     std::cout << "=== Integration Test: Graph (M1 + M2) ===\n\n";
 
     // 1. Initialize your Parser (M1) and read the input file
-    std::string filePath = "../data/input/input.csv";
+    std::string filePath = "data/input/input.csv";
     CsvParser parser(filePath);
 
     if (!parser.parse()) {
@@ -49,6 +50,20 @@ int main() {
 
     std::cout << "\nThe graph currently has " << myGraph.size() << " nodes allocated in memory.\n";
     std::cout << "Your data structures and parser fit perfectly with M2's code!\n";
+
+    std::cout << "\n=== MaxFlow Test ===\n";
+
+    Graph testGraph(4);
+
+    testGraph.addEdge(0, 1, 10);
+    testGraph.addEdge(0, 2, 5);
+    testGraph.addEdge(1, 3, 10);
+    testGraph.addEdge(2, 3, 5);
+
+    MaxFlow maxFlow;
+    int result = maxFlow.edmondsKarp(testGraph, 0, 3);
+
+    std::cout << "Maximum flow: " << result << '\n';
 
     return 0;
 }

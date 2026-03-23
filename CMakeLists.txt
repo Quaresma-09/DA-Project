@@ -9,4 +9,5 @@ add_executable(myProg
         src/main.cpp
         src/parser/CsvParser.cpp
         src/graph/Graph.cpp
+        src/graph/MaxFlow.cpp
 )

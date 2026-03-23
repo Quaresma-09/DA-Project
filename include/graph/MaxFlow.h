@@ -1,8 +1,16 @@
-//
-// Created by quaresma on 3/19/26.
-//
+#ifndef DAPROJ1_MAXFLOW_H
+#define DAPROJ1_MAXFLOW_H
 
-#ifndef DA_PROJECT_MAXFLOW_H
-#define DA_PROJECT_MAXFLOW_H
+#include "../include/graph/Graph.h"
+#include <vector>
 
-#endif //DA_PROJECT_MAXFLOW_H
+class MaxFlow {
+    bool bfs(Graph& graph, int source, int sink,
+             std::vector<int>& parent,
+             std::vector<int>& parentEdge);
+
+public:
+    int edmondsKarp(Graph& graph, int source, int sink);
+};
+
+#endif
