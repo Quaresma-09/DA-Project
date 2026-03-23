@@ -3,6 +3,7 @@
 #include "graph/Graph.h"
 #include "graph/MaxFlow.h"
 #include "core/AssignmentEngine.h"
+#include "core/RiskAnalyzer.h"
 
 int main() {
     std::cout << "=== Integration Test: Graph (M1 + M2) ===\n\n";
@@ -80,6 +81,46 @@ int main() {
         std::cout << "Valid assignment exists.\n";
     } else {
         std::cout << "No valid assignment possible.\n";
+    }
+
+    std::cout << "\nAssignments found:\n";
+    const auto& assignments = engine.getAssignments();
+
+    if (assignments.empty()) {
+        std::cout << "No assignments were created.\n";
+    } else {
+        for (const auto& assignment : assignments) {
+            std::cout << "Reviewer " << assignment.reviewerId
+                      << " -> Submission " << assignment.submissionId
+                      << " (Topic " << assignment.topic << ")\n";
+        }
+    }
+
+    std::cout << "\nMissing reviews:\n";
+    const auto& missingReviews = engine.getMissingReviews();
+
+    if (missingReviews.empty()) {
+        std::cout << "No missing reviews.\n";
+    } else {
+        for (const auto& missing : missingReviews) {
+            std::cout << "Submission " << missing.submissionId
+                      << " (Topic " << missing.topic << ") is missing "
+                      << missing.missingReviews << " review(s)\n";
+        }
+    }
+
+    std::cout << "\n=== RiskAnalyzer Test (K = 1) ===\n";
+
+    RiskAnalyzer riskAnalyzer(submissions, reviewers, config);
+    const auto& criticalReviewers = riskAnalyzer.findCriticalReviewersForK1();
+
+    if (criticalReviewers.empty()) {
+        std::cout << "No critical reviewers found.\n";
+    } else {
+        std::cout << "Critical reviewers:\n";
+        for (int reviewerId : criticalReviewers) {
+            std::cout << "Reviewer " << reviewerId << '\n';
+        }
     }
 
     return 0;
