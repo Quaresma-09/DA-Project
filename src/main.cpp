@@ -82,5 +82,31 @@ int main() {
         std::cout << "No valid assignment possible.\n";
     }
 
+    std::cout << "\nAssignments found:\n";
+    const auto& assignments = engine.getAssignments();
+
+    if (assignments.empty()) {
+        std::cout << "No assignments were created.\n";
+    } else {
+        for (const auto& assignment : assignments) {
+            std::cout << "Reviewer " << assignment.reviewerId
+                      << " -> Submission " << assignment.submissionId
+                      << " (Topic " << assignment.topic << ")\n";
+        }
+    }
+
+    std::cout << "\nMissing reviews:\n";
+    const auto& missingReviews = engine.getMissingReviews();
+
+    if (missingReviews.empty()) {
+        std::cout << "No missing reviews.\n";
+    } else {
+        for (const auto& missing : missingReviews) {
+            std::cout << "Submission " << missing.submissionId
+                      << " (Topic " << missing.topic << ") is missing "
+                      << missing.missingReviews << " review(s)\n";
+        }
+    }
+
     return 0;
 }
