@@ -1,7 +1,7 @@
 #ifndef DAPROJ1_MAXFLOW_H
 #define DAPROJ1_MAXFLOW_H
 
-#include "../include/graph/Graph.h"
+#include "graph/Graph.h"
 #include <vector>
 
 class MaxFlow {

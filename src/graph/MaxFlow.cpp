@@ -1,4 +1,4 @@
-#include "../include/graph/MaxFlow.h"
+#include "graph/MaxFlow.h"
 
 #include <algorithm>
 #include <limits>

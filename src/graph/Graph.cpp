@@ -1,4 +1,4 @@
-#include "../include/graph/Graph.h"
+#include "graph/Graph.h"
 
 Edge::Edge(int to, int capacity, int flow, int rev)
     : to(to), capacity(capacity), flow(flow), rev(rev) {}

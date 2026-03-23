@@ -1,7 +1,8 @@
 #include <iostream>
-#include "../include/parser/CsvParser.h"
-#include "../include/graph/Graph.h"
-#include "../include/graph/MaxFlow.h"
+#include "parser/CsvParser.h"
+#include "graph/Graph.h"
+#include "graph/MaxFlow.h"
+#include "core/AssignmentEngine.h"
 
 int main() {
     std::cout << "=== Integration Test: Graph (M1 + M2) ===\n\n";
@@ -64,6 +65,22 @@ int main() {
     int result = maxFlow.edmondsKarp(testGraph, 0, 3);
 
     std::cout << "Maximum flow: " << result << '\n';
+
+    std::cout << "\n=== AssignmentEngine Test ===\n";
+
+    AssignmentEngine engine(submissions, reviewers, config);
+
+    int flow = engine.solveBaseAssignment();
+    int required = engine.getRequiredFlow();
+
+    std::cout << "Computed flow: " << flow << '\n';
+    std::cout << "Required flow: " << required << '\n';
+
+    if (engine.hasValidAssignment()) {
+        std::cout << "Valid assignment exists.\n";
+    } else {
+        std::cout << "No valid assignment possible.\n";
+    }
 
     return 0;
 }

@@ -4,9 +4,9 @@
 #include <string>
 #include <vector>
 #include <unordered_set>
-#include "../model/Submission.h"
-#include "../model/Reviewer.h"
-#include "../model/Config.h"
+#include "model/Submission.h"
+#include "model/Reviewer.h"
+#include "model/Config.h"
 
 class CsvParser {
 private:
