@@ -7,6 +7,13 @@
 
 #include <vector>
 
+/**
+ * @brief Analyzes the impact of removing reviewers from the assignment problem.
+ *
+ * This class is used for Risk Analysis with K = 1, where one reviewer
+ * is removed at a time and the assignment problem is solved again to
+ * determine whether that reviewer is critical.
+ */
 class RiskAnalyzer {
 private:
     std::vector<Submission> submissions;
@@ -14,10 +21,22 @@ private:
     Config config;
 
 public:
+
+    /**
+     * @brief Constructs the risk analyzer.
+     */
     RiskAnalyzer(const std::vector<Submission>& submissions,
                  const std::vector<Reviewer>& reviewers,
                  const Config& config);
 
+    /**
+     * @brief Finds all critical reviewers for the case K = 1.
+     *
+     * A reviewer is considered critical if removing that reviewer makes
+     * it impossible to obtain a valid complete assignment.
+     *
+     * @complexity O(R * V * E^2)
+     */
     std::vector<int> findCriticalReviewersForK1() const;
 };
 

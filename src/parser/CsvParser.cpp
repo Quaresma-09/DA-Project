@@ -1,4 +1,4 @@
-#include "../../include/parser/CsvParser.h"
+#include "parser/CsvParser.h"
 #include <fstream>
 #include <iostream>
 #include <sstream>
