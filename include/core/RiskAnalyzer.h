@@ -1,8 +1,24 @@
-//
-// Created by quaresma on 3/19/26.
-//
+#ifndef DA_PROJECT_RISK_ANALYZER_H
+#define DA_PROJECT_RISK_ANALYZER_H
 
-#ifndef DA_PROJECT_RISKANALYZER_H
-#define DA_PROJECT_RISKANALYZER_H
+#include "model/Submission.h"
+#include "model/Reviewer.h"
+#include "model/Config.h"
 
-#endif //DA_PROJECT_RISKANALYZER_H
+#include <vector>
+
+class RiskAnalyzer {
+private:
+    std::vector<Submission> submissions;
+    std::vector<Reviewer> reviewers;
+    Config config;
+
+public:
+    RiskAnalyzer(const std::vector<Submission>& submissions,
+                 const std::vector<Reviewer>& reviewers,
+                 const Config& config);
+
+    std::vector<int> findCriticalReviewersForK1() const;
+};
+
+#endif
