@@ -9,7 +9,7 @@ int main() {
     std::cout << "=== Integration Test: Graph (M1 + M2) ===\n\n";
 
     // 1. Initialize your Parser (M1) and read the input file
-    std::string filePath = "data/input/input.csv";
+    std::string filePath = "../data/input/input.csv";
     CsvParser parser(filePath);
 
     if (!parser.parse()) {
