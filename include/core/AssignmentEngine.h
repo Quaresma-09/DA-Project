@@ -81,9 +81,23 @@ private:
      */
     void calculateMissingReviews();
 
+    /**
+ * @brief Checks if a reviewer is compatible with a submission.
+ *
+ * Compatibility is based on matching primary expertise and topic.
+ */
     bool isCompatible(const Reviewer& reviewer, const Submission& submission) const;
+
+    /**
+     * @brief Returns the node index corresponding to a reviewer.
+     */
     int getReviewerNode(int reviewerIndex) const;
+
+    /**
+     * @brief Returns the node index corresponding to a submission.
+     */
     int getSubmissionNode(int submissionIndex) const;
+
     int getReviewerIndexFromNode(int node) const;
     int getSubmissionIndexFromNode(int node) const;
 
@@ -99,7 +113,7 @@ public:
     /**
      * @brief Solves the assignment problem using max-flow.
      *
-     * @complexity O(V * E^2)
+     * @complexity Dominated by Edmonds-Karp: O(V * E^2)
      */
     int solveBaseAssignment();
 

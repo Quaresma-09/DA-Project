@@ -1,5 +1,5 @@
-#ifndef GRAPH_H
-#define GRAPH_H
+#ifndef DA_PROJECT_GRAPH_H
+#define DA_PROJECT_GRAPH_H
 
 #include <vector>
 
@@ -26,7 +26,7 @@ struct Edge {
  */
 class Graph {
 private:
-    std::vector<std::vector<Edge>> adj;  //adjacency list
+    std::vector<std::vector<Edge>> adj;
 
 public:
     Graph();

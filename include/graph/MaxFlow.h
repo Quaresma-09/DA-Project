@@ -1,5 +1,5 @@
-#ifndef DAPROJ1_MAXFLOW_H
-#define DAPROJ1_MAXFLOW_H
+#ifndef DA_PROJECT_MAXFLOW_H
+#define DA_PROJECT_MAXFLOW_H
 
 #include "graph/Graph.h"
 #include <vector>

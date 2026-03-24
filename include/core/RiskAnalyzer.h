@@ -30,13 +30,13 @@ public:
                  const Config& config);
 
     /**
-     * @brief Finds all critical reviewers for the case K = 1.
-     *
-     * A reviewer is considered critical if removing that reviewer makes
-     * it impossible to obtain a valid complete assignment.
-     *
-     * @complexity O(R * V * E^2)
-     */
+    * @brief Finds critical reviewers for the case K = 1.
+    *
+    * Each reviewer is removed individually and the assignment problem
+    * is solved again to determine if a valid solution still exists.
+    *
+    * @complexity O(R * V * E^2)
+    */
     std::vector<int> findCriticalReviewersForK1() const;
 };
 
