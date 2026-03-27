@@ -1,3 +1,8 @@
+/**
+ * @file MaxFlow.cpp
+ * @brief Implementation of the Edmonds-Karp maximum flow algorithm.
+ */
+
 #include "graph/MaxFlow.h"
 
 #include <algorithm>
@@ -26,6 +31,7 @@ bool MaxFlow::bfs(Graph& graph, int source, int sink,
             Edge& edge = adj[current][i];
             int residualCapacity = edge.capacity - edge.flow;
 
+            // Only visit unvisited nodes with available residual capacity
             if (parent[edge.to] == -1 && residualCapacity > 0) {
                 parent[edge.to] = current;
                 parentEdge[edge.to] = i;
@@ -50,7 +56,10 @@ int MaxFlow::edmondsKarp(Graph& graph, int source, int sink) {
 
     std::vector<std::vector<Edge>>& adj = graph.getAdj();
 
+    // Find augmenting paths until none exist
     while (bfs(graph, source, sink, parent, parentEdge)) {
+
+        // Find the bottleneck (minimum residual capacity along the path)
         int pathFlow = std::numeric_limits<int>::max();
 
         int current = sink;
@@ -65,6 +74,7 @@ int MaxFlow::edmondsKarp(Graph& graph, int source, int sink) {
             current = previous;
         }
 
+        // Update flow along the path and reverse edges
         current = sink;
         while (current != source) {
             int previous = parent[current];

@@ -1,3 +1,8 @@
+/**
+ * @file RiskAnalyzer.cpp
+ * @brief Implementation of the RiskAnalyzer class.
+ */
+
 #include "core/RiskAnalyzer.h"
 #include "core/AssignmentEngine.h"
 
@@ -14,6 +19,7 @@ std::vector<int> RiskAnalyzer::findCriticalReviewersForK1() const {
     int numReviewers = static_cast<int>(reviewers.size());
 
     for (int i = 0; i < numReviewers; i++) {
+        // Create a list of reviewers excluding reviewer i
         std::vector<Reviewer> filteredReviewers;
         filteredReviewers.reserve(numReviewers - 1);
 
@@ -23,11 +29,13 @@ std::vector<int> RiskAnalyzer::findCriticalReviewersForK1() const {
             }
         }
 
+        // Solve the assignment problem without this reviewer
         AssignmentEngine engine(submissions, filteredReviewers, config);
 
         int flow = engine.solveBaseAssignment();
         int required = engine.getRequiredFlow();
 
+        // If the flow drops below required, this reviewer is critical
         if (flow < required) {
             criticalReviewers.push_back(reviewers[i].getId());
         }

@@ -1,3 +1,11 @@
+/**
+ * @file AssignmentEngine.h
+ * @brief Header file for the AssignmentEngine class.
+ *
+ * Defines the assignment engine that uses max-flow to compute
+ * reviewer-submission assignments based on domain expertise.
+ */
+
 #ifndef DA_PROJECT_ASSIGNMENT_ENGINE_H
 #define DA_PROJECT_ASSIGNMENT_ENGINE_H
 
@@ -15,7 +23,7 @@
 struct Assignment {
     int reviewerId;
     int submissionId;
-    int topic;
+    int topic;      
 };
 
 /**
@@ -31,8 +39,13 @@ struct MissingReview {
  * @brief Builds and solves the reviewer assignment problem using max-flow.
  *
  * Constructs a flow network where reviewers are matched to submissions
- * based on primary expertise, and computes a valid assignment using
- * the Edmonds-Karp algorithm.
+ * based on domain expertise, and computes a valid assignment using
+ * the Edmonds-Karp algorithm. Supports different assignment modes:
+ * - Mode 0/1: Primary domains only.
+ * - Mode 2: Primary + Secondary submission domains, Primary reviewer expertise.
+ * - Mode 3: All primary and secondary domains of both.
+ *
+ * @complexity O(V * E^2) for the max-flow computation.
  */
 class AssignmentEngine {
 private:
@@ -61,7 +74,7 @@ private:
     void initializeGraph();
 
     /**
-     * @brief Builds the base flow network.
+     * @brief Builds the flow network based on the current assignment mode.
      *
      * @complexity O(R * S)
      */
@@ -81,7 +94,23 @@ private:
      */
     void calculateMissingReviews();
 
+    /**
+     * @brief Checks if a reviewer is compatible with a submission.
+     *
+     * Uses the GenerateAssignments mode from the config to determine
+     * which domains to consider for compatibility.
+     *
+     * @complexity O(1)
+     */
     bool isCompatible(const Reviewer& reviewer, const Submission& submission) const;
+
+    /**
+     * @brief Determines the matched topic between a reviewer and submission.
+     *
+     * @complexity O(1)
+     */
+    int getMatchTopic(const Reviewer& reviewer, const Submission& submission) const;
+
     int getReviewerNode(int reviewerIndex) const;
     int getSubmissionNode(int submissionIndex) const;
     int getReviewerIndexFromNode(int node) const;

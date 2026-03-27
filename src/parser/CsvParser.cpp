@@ -24,7 +24,7 @@ std::string CsvParser::trim(const std::string& str) {
 
 /**
  * @brief Strips comments from the input line.
- * This allows the parser to ignore everything after the '#' character 
+ * This allows the parser to ignore everything after the '#' character
  * within data lines.
  */
 std::string CsvParser::removeComments(const std::string& line) {
@@ -37,14 +37,14 @@ std::string CsvParser::removeComments(const std::string& line) {
 
 /**
  * @brief Custom CSV splitter that handles quoted fields.
- * Iterates through the line character by character to ensure commas 
+ * Iterates through the line character by character to ensure commas
  * inside quotes don't break the tokenization.
  */
 std::vector<std::string> CsvParser::splitCsvLine(const std::string& line) {
     std::vector<std::string> tokens;
     std::string current;
     bool inQuotes = false;
-    
+
     for (char c : line) {
         if (c == '\"') {
             inQuotes = !inQuotes;
@@ -61,14 +61,19 @@ std::vector<std::string> CsvParser::splitCsvLine(const std::string& line) {
 
 /**
  * @brief Main parsing loop using a State Machine approach.
- * * The method identifies headers (e.g., #Submissions) to switch states and 
+ *
+ * The method identifies headers (e.g., #Submissions) to switch states and
  * determines how to process subsequent lines based on the current state.
- * Includes error handling for duplicated IDs and malformed integers.
+ * Includes error handling for duplicated IDs, malformed integers, and
+ * validation of mandatory parameters.
+ *
+ * @return true if the file was parsed successfully, false otherwise.
+ * @complexity O(N) where N is the number of lines in the file.
  */
 bool CsvParser::parse() {
     std::ifstream file(filename);
     if (!file.is_open()) {
-        std::cerr << "Error: Couldn't open file " << filename << std::endl;
+        std::cerr << "Error: Could not open file " << filename << std::endl;
         return false;
     }
 
@@ -78,12 +83,15 @@ bool CsvParser::parse() {
     State currentState = NONE;
 
     int lineNum = 0;
+    bool hasMinReviews = false;
+    bool hasMaxReviews = false;
+    bool hasGenerateAssignments = false;
 
     while (std::getline(file, line)) {
         lineNum++;
 
         std::string trimmedLine = trim(line);
-        
+
         // Section detection logic
         if (trimmedLine == "#Submissions") { currentState = SUBMISSIONS; continue; }
         if (trimmedLine == "#Reviewers") { currentState = REVIEWERS; continue; }
@@ -99,27 +107,37 @@ bool CsvParser::parse() {
 
         try {
             if (currentState == SUBMISSIONS) {
-                if (tokens.size() < 5) continue;
+                if (tokens.size() < 5) {
+                    std::cerr << "Warning: Skipping malformed submission on line " << lineNum
+                              << " (expected at least 5 fields)." << std::endl;
+                    continue;
+                }
                 int id = std::stoi(tokens[0]);
-                
+
                 // Duplicate ID validation
                 if (submissionIds.find(id) != submissionIds.end()) {
-                    std::cerr << "Error in line " << lineNum << ": Submission ID duplicate (" << id << ")." << std::endl;
+                    std::cerr << "Error on line " << lineNum
+                              << ": Duplicate Submission ID (" << id << ")." << std::endl;
                     return false;
                 }
                 submissionIds.insert(id);
 
                 int primary = std::stoi(tokens[4]);
                 int secondary = (tokens.size() >= 6 && !tokens[5].empty()) ? std::stoi(tokens[5]) : -1;
-                
+
                 submissions.emplace_back(id, tokens[1], tokens[2], tokens[3], primary, secondary);
-            } 
+            }
             else if (currentState == REVIEWERS) {
-                if (tokens.size() < 4) continue;
+                if (tokens.size() < 4) {
+                    std::cerr << "Warning: Skipping malformed reviewer on line " << lineNum
+                              << " (expected at least 4 fields)." << std::endl;
+                    continue;
+                }
                 int id = std::stoi(tokens[0]);
 
                 if (reviewerIds.find(id) != reviewerIds.end()) {
-                    std::cerr << "Error in line " << lineNum << ": Reviewer ID duplicate (" << id << ")." << std::endl;
+                    std::cerr << "Error on line " << lineNum
+                              << ": Duplicate Reviewer ID (" << id << ")." << std::endl;
                     return false;
                 }
                 reviewerIds.insert(id);
@@ -135,18 +153,58 @@ bool CsvParser::parse() {
                 std::string value = tokens[1];
 
                 // Map CSV keys to Config object methods
-                if (key == "MinReviewsPerSubmission") config.setMinReviewsPerSubmission(std::stoi(value));
-                else if (key == "MaxReviewsPerReviewer") config.setMaxReviewsPerReviewer(std::stoi(value));
-                else if (key == "GenerateAssignments") config.setGenerateAssignments(std::stoi(value));
-                else if (key == "RiskAnalysis") config.setRiskAnalysis(std::stoi(value));
-                else if (key == "OutputFileName") config.setOutputFileName(value);
+                if (key == "MinReviewsPerSubmission") {
+                    config.setMinReviewsPerSubmission(std::stoi(value));
+                    hasMinReviews = true;
+                }
+                else if (key == "MaxReviewsPerReviewer") {
+                    config.setMaxReviewsPerReviewer(std::stoi(value));
+                    hasMaxReviews = true;
+                }
+                else if (key == "GenerateAssignments") {
+                    config.setGenerateAssignments(std::stoi(value));
+                    hasGenerateAssignments = true;
+                }
+                else if (key == "RiskAnalysis") {
+                    config.setRiskAnalysis(std::stoi(value));
+                }
+                else if (key == "OutputFileName") {
+                    config.setOutputFileName(value);
+                }
+                // PrimaryReviewerExpertise, SecondaryReviewerExpertise,
+                // PrimarySubmissionDomain, SecondarySubmissionDomain
+                // are informational and do not affect processing.
             }
         } catch (const std::exception& e) {
-            std::cerr << "Formatting error on line " << lineNum << ": " << cleanLine << std::endl;
+            std::cerr << "Error: Malformed data on line " << lineNum
+                      << ": " << cleanLine << std::endl;
             return false;
         }
     }
 
     file.close();
+
+    // Validate mandatory parameters
+    if (submissions.empty()) {
+        std::cerr << "Error: No submissions found in the input file." << std::endl;
+        return false;
+    }
+    if (reviewers.empty()) {
+        std::cerr << "Error: No reviewers found in the input file." << std::endl;
+        return false;
+    }
+    if (!hasMinReviews) {
+        std::cerr << "Error: Missing mandatory parameter 'MinReviewsPerSubmission'." << std::endl;
+        return false;
+    }
+    if (!hasMaxReviews) {
+        std::cerr << "Error: Missing mandatory parameter 'MaxReviewsPerReviewer'." << std::endl;
+        return false;
+    }
+    if (!hasGenerateAssignments) {
+        std::cerr << "Error: Missing mandatory parameter 'GenerateAssignments'." << std::endl;
+        return false;
+    }
+
     return true;
 }

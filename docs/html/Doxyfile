@@ -1,0 +1,46 @@
+# Doxyfile for DA Project 1 - Conference Assignment System
+
+PROJECT_NAME           = "Conference Assignment System"
+PROJECT_NUMBER         = "DA 2026 - Project 1"
+PROJECT_BRIEF          = "Reviewer-Submission Assignment Tool using Max-Flow"
+OUTPUT_DIRECTORY       = docs
+CREATE_SUBDIRS         = NO
+ALLOW_UNICODE_NAMES    = NO
+
+# Input
+INPUT                  = include src README.md
+FILE_PATTERNS          = *.h *.hpp *.c *.cc *.cpp *.md
+RECURSIVE              = YES
+EXCLUDE                = build cmake-build-debug docs
+USE_MDFILE_AS_MAINPAGE = README.md
+
+# Extraction
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+JAVADOC_AUTOBRIEF      = YES
+ALIASES               += complexity="\\par Complexity:"
+AUTOLINK_SUPPORT       = NO
+SORT_MEMBER_DOCS       = YES
+SORT_BRIEF_DOCS        = YES
+WARNINGS               = YES
+WARN_IF_UNDOCUMENTED   = YES
+WARN_IF_DOC_ERROR      = YES
+QUIET                  = NO
+
+# Output
+GENERATE_HTML          = YES
+HTML_OUTPUT            = html
+GENERATE_TREEVIEW      = YES
+GENERATE_LATEX         = NO
+
+# Source browsing
+SOURCE_BROWSER         = YES
+INLINE_SOURCES         = NO
+REFERENCED_BY_RELATION = YES
+REFERENCES_RELATION    = YES
+FULL_PATH_NAMES        = NO
+
+# Graphs (disabled to avoid requiring Graphviz)
+HAVE_DOT               = NO
+CLASS_DIAGRAMS         = YES
