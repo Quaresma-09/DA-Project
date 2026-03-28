@@ -12,4 +12,6 @@ add_executable(myProg
         src/graph/MaxFlow.cpp
         src/core/AssignmentEngine.cpp
         src/core/RiskAnalyzer.cpp
+        src/core/OutputWriter.cpp
+        src/ui/Menu.cpp
 )

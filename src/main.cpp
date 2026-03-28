@@ -1,127 +1,110 @@
+/**
+ * @file main.cpp
+ * @brief Entry point for the Conference Assignment System.
+ *
+ * Supports two modes of operation:
+ * - Interactive: Launches a CLI menu for manual operation.
+ * - Batch: Processes a CSV file directly and outputs results.
+ *   Usage: myProg -b input.csv output.csv
+ */
+
 #include <iostream>
+#include <string>
 #include "parser/CsvParser.h"
-#include "graph/Graph.h"
-#include "graph/MaxFlow.h"
 #include "core/AssignmentEngine.h"
 #include "core/RiskAnalyzer.h"
+#include "core/OutputWriter.h"
+#include "ui/Menu.h"
 
-int main() {
-    std::cout << "=== Integration Test: Graph (M1 + M2) ===\n\n";
-
-    // 1. Initialize your Parser (M1) and read the input file
-    std::string filePath = "../data/input/input.csv";
-    CsvParser parser(filePath);
+/**
+ * @brief Runs the program in batch mode.
+ *
+ * Parses the input file, generates assignments, and optionally runs
+ * risk analysis. All output is written to the specified output file.
+ * Error messages are directed to stderr.
+ *
+ * @param inputFile Path to the input CSV file.
+ * @param outputFile Path for the output file (overrides config).
+ * @return 0 on success, 1 on failure.
+ *
+ * @complexity O(V * E^2) for the max-flow computation.
+ */
+int runBatchMode(const std::string& inputFile, const std::string& outputFile) {
+    CsvParser parser(inputFile);
 
     if (!parser.parse()) {
-        std::cerr << "❌ Failed to process the CSV file. Check the errors above.\n";
+        std::cerr << "Error: Failed to parse file " << inputFile << std::endl;
         return 1;
     }
 
-    // 2. Fetch the data extracted by the parser
-    const Config& config = parser.getConfig();
     const auto& submissions = parser.getSubmissions();
     const auto& reviewers = parser.getReviewers();
+    const Config& config = parser.getConfig();
 
-    // 3. Initialize your teammate's Graph (M2)
-    // The graph needs to know the total number of vertices.
-    // We allocate 1000 nodes for this quick test.
-    Graph myGraph(1000);
+    std::cout << "Loaded " << submissions.size() << " submissions and "
+              << reviewers.size() << " reviewers." << std::endl;
 
-    // Dummy mapping (offsets) just for this test to avoid ID collisions
-    // (e.g., Submission ID 1 vs Reviewer ID 1)
-    int sourceNode = 0;
-    int sinkNode = 1;
-    int submissionOffset = 100;
-    int reviewerOffset = 500;
-
-    // 4. Test connecting the Source to the Submissions (Capacity = MinReviews)
-    int minReviews = config.getMinReviewsPerSubmission();
-    for (const auto& sub : submissions) {
-        int mappedSubId = sub.getId() + submissionOffset;
-        myGraph.addEdge(sourceNode, mappedSubId, minReviews);
-    }
-    std::cout << "✅ Edges 'Source -> Submissions' added to the graph!\n";
-
-    // 5. Test connecting the Reviewers to the Sink (Capacity = MaxReviews)
-    int maxReviews = config.getMaxReviewsPerReviewer();
-    for (const auto& rev : reviewers) {
-        int mappedRevId = rev.getId() + reviewerOffset;
-        myGraph.addEdge(mappedRevId, sinkNode, maxReviews);
-    }
-    std::cout << "✅ Edges 'Reviewers -> Sink' added to the graph!\n";
-
-    std::cout << "\nThe graph currently has " << myGraph.size() << " nodes allocated in memory.\n";
-    std::cout << "Your data structures and parser fit perfectly with M2's code!\n";
-
-    std::cout << "\n=== MaxFlow Test ===\n";
-
-    Graph testGraph(4);
-
-    testGraph.addEdge(0, 1, 10);
-    testGraph.addEdge(0, 2, 5);
-    testGraph.addEdge(1, 3, 10);
-    testGraph.addEdge(2, 3, 5);
-
-    MaxFlow maxFlow;
-    int result = maxFlow.edmondsKarp(testGraph, 0, 3);
-
-    std::cout << "Maximum flow: " << result << '\n';
-
-    std::cout << "\n=== AssignmentEngine Test ===\n";
-
+    // Generate assignments
     AssignmentEngine engine(submissions, reviewers, config);
-
     int flow = engine.solveBaseAssignment();
     int required = engine.getRequiredFlow();
 
-    std::cout << "Computed flow: " << flow << '\n';
-    std::cout << "Required flow: " << required << '\n';
+    std::cout << "Flow: " << flow << " / " << required << std::endl;
 
     if (engine.hasValidAssignment()) {
-        std::cout << "Valid assignment exists.\n";
+        std::cout << "Valid assignment found." << std::endl;
     } else {
-        std::cout << "No valid assignment possible.\n";
+        std::cout << "Could not assign all reviews." << std::endl;
     }
 
-    std::cout << "\nAssignments found:\n";
-    const auto& assignments = engine.getAssignments();
-
-    if (assignments.empty()) {
-        std::cout << "No assignments were created.\n";
+    // Write assignment output (only if GenerateAssignments != 0)
+    if (config.getGenerateAssignments() != 0) {
+        OutputWriter::writeAssignments(outputFile, engine.getAssignments(), engine.getMissingReviews());
     } else {
-        for (const auto& assignment : assignments) {
-            std::cout << "Reviewer " << assignment.reviewerId
-                      << " -> Submission " << assignment.submissionId
-                      << " (Topic " << assignment.topic << ")\n";
+        std::cout << "GenerateAssignments = 0: assignment computed but not reported." << std::endl;
+    }
+
+    // Run risk analysis if enabled in the config
+    int riskLevel = config.getRiskAnalysis();
+    if (riskLevel > 0) {
+        if (riskLevel > 1) {
+            std::cerr << "Warning: Risk Analysis with K > 1 is not implemented. "
+                      << "Running K = 1 analysis instead." << std::endl;
+        }
+
+        std::cout << "Running risk analysis (K=1)..." << std::endl;
+
+        RiskAnalyzer analyzer(submissions, reviewers, config);
+        const auto& critical = analyzer.findCriticalReviewersForK1();
+
+        if (critical.empty()) {
+            std::cout << "No critical reviewers found." << std::endl;
+        } else {
+            std::cout << "Found " << critical.size() << " critical reviewer(s)." << std::endl;
+        }
+
+        // Append risk analysis to the output file (or write new if mode 0)
+        if (config.getGenerateAssignments() != 0) {
+            OutputWriter::appendRiskAnalysis(outputFile, critical, riskLevel);
+        } else {
+            OutputWriter::writeRiskAnalysis(outputFile, critical, riskLevel);
         }
     }
 
-    std::cout << "\nMissing reviews:\n";
-    const auto& missingReviews = engine.getMissingReviews();
+    return 0;
+}
 
-    if (missingReviews.empty()) {
-        std::cout << "No missing reviews.\n";
-    } else {
-        for (const auto& missing : missingReviews) {
-            std::cout << "Submission " << missing.submissionId
-                      << " (Topic " << missing.topic << ") is missing "
-                      << missing.missingReviews << " review(s)\n";
-        }
+int main(int argc, char* argv[]) {
+    // Batch mode: myProg -b input.csv output.csv
+    if (argc >= 4 && std::string(argv[1]) == "-b") {
+        std::string inputFile = argv[2];
+        std::string outputFile = argv[3];
+        return runBatchMode(inputFile, outputFile);
     }
 
-    std::cout << "\n=== RiskAnalyzer Test (K = 1) ===\n";
-
-    RiskAnalyzer riskAnalyzer(submissions, reviewers, config);
-    const auto& criticalReviewers = riskAnalyzer.findCriticalReviewersForK1();
-
-    if (criticalReviewers.empty()) {
-        std::cout << "No critical reviewers found.\n";
-    } else {
-        std::cout << "Critical reviewers:\n";
-        for (int reviewerId : criticalReviewers) {
-            std::cout << "Reviewer " << reviewerId << '\n';
-        }
-    }
+    // Interactive mode
+    Menu menu;
+    menu.run();
 
     return 0;
 }

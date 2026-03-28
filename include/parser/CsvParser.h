@@ -39,7 +39,7 @@ private:
     std::string trim(const std::string& str);
 
     /**
-     * @brief Splits a CSV line into tokens based on the ';' delimiter.
+     * @brief Splits a CSV line into tokens based on the ',' delimiter.
      * @param line The raw line from the CSV file.
      * @return A vector of strings containing the individual columns.
      */

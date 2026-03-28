@@ -1,3 +1,8 @@
+/**
+ * @file AssignmentEngine.cpp
+ * @brief Implementation of the AssignmentEngine class.
+ */
+
 #include "core/AssignmentEngine.h"
 
 AssignmentEngine::AssignmentEngine(const std::vector<Submission>& submissions,
@@ -27,7 +32,62 @@ void AssignmentEngine::initializeGraph() {
 }
 
 bool AssignmentEngine::isCompatible(const Reviewer& reviewer, const Submission& submission) const {
-    return reviewer.getPrimaryExpertise() == submission.getPrimaryTopic();
+    int mode = config.getGenerateAssignments();
+
+    // Mode 0 or 1: only primary expertise matches primary domain
+    if (mode <= 1) {
+        return reviewer.getPrimaryExpertise() == submission.getPrimaryTopic();
+    }
+
+    // Mode 2: primary expertise matches primary or secondary submission domain
+    if (mode == 2) {
+        if (reviewer.getPrimaryExpertise() == submission.getPrimaryTopic()) return true;
+        if (submission.getSecondaryTopic() != -1 &&
+            reviewer.getPrimaryExpertise() == submission.getSecondaryTopic()) return true;
+        return false;
+    }
+
+    // Mode 3: any expertise matches any domain
+    if (reviewer.getPrimaryExpertise() == submission.getPrimaryTopic()) return true;
+    if (submission.getSecondaryTopic() != -1 &&
+        reviewer.getPrimaryExpertise() == submission.getSecondaryTopic()) return true;
+    if (reviewer.getSecondaryExpertise() != -1 &&
+        reviewer.getSecondaryExpertise() == submission.getPrimaryTopic()) return true;
+    if (reviewer.getSecondaryExpertise() != -1 && submission.getSecondaryTopic() != -1 &&
+        reviewer.getSecondaryExpertise() == submission.getSecondaryTopic()) return true;
+
+    return false;
+}
+
+int AssignmentEngine::getMatchTopic(const Reviewer& reviewer, const Submission& submission) const {
+    int mode = config.getGenerateAssignments();
+
+    if (mode <= 1) {
+        return submission.getPrimaryTopic();
+    }
+
+    if (mode == 2) {
+        if (reviewer.getPrimaryExpertise() == submission.getPrimaryTopic())
+            return submission.getPrimaryTopic();
+        if (submission.getSecondaryTopic() != -1 &&
+            reviewer.getPrimaryExpertise() == submission.getSecondaryTopic())
+            return submission.getSecondaryTopic();
+    }
+
+    // Mode 3: check all combinations, prefer primary-primary match
+    if (reviewer.getPrimaryExpertise() == submission.getPrimaryTopic())
+        return submission.getPrimaryTopic();
+    if (submission.getSecondaryTopic() != -1 &&
+        reviewer.getPrimaryExpertise() == submission.getSecondaryTopic())
+        return submission.getSecondaryTopic();
+    if (reviewer.getSecondaryExpertise() != -1 &&
+        reviewer.getSecondaryExpertise() == submission.getPrimaryTopic())
+        return submission.getPrimaryTopic();
+    if (reviewer.getSecondaryExpertise() != -1 && submission.getSecondaryTopic() != -1 &&
+        reviewer.getSecondaryExpertise() == submission.getSecondaryTopic())
+        return submission.getSecondaryTopic();
+
+    return -1;
 }
 
 int AssignmentEngine::getReviewerNode(int reviewerIndex) const {
@@ -51,7 +111,6 @@ void AssignmentEngine::buildBaseGraph() {
     int numSubmissions = static_cast<int>(submissions.size());
 
     int maxReviewsPerReviewer = config.getMaxReviewsPerReviewer();
-    int minReviewsPerSubmission = config.getMinReviewsPerSubmission();
 
     for (int i = 0; i < numReviewers; i++) {
         graph.addEdge(source, getReviewerNode(i), maxReviewsPerReviewer);
@@ -83,7 +142,7 @@ void AssignmentEngine::extractAssignments() {
                 Assignment assignment;
                 assignment.reviewerId = reviewers[i].getId();
                 assignment.submissionId = submissions[submissionIndex].getId();
-                assignment.topic = submissions[submissionIndex].getPrimaryTopic();
+                assignment.topic = getMatchTopic(reviewers[i], submissions[submissionIndex]);
 
                 assignments.push_back(assignment);
             }

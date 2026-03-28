@@ -1,3 +1,8 @@
+/**
+ * @file Graph.cpp
+ * @brief Implementation of the Graph class and Edge struct.
+ */
+
 #include "graph/Graph.h"
 
 Edge::Edge(int to, int capacity, int flow, int rev)
