@@ -1,0 +1,16 @@
+<map id="src/graph/MaxFlow.cpp" name="src/graph/MaxFlow.cpp">
+<area shape="rect" id="Node000001" title="Implementation of the Edmonds&#45;Karp maximum flow algorithm." alt="" coords="205,5,376,31"/>
+<area shape="rect" id="Node000002" href="$MaxFlow_8h.html" title="Header file for the MaxFlow class." alt="" coords="43,79,176,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="263,33,153,76,151,71,261,28"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="200,79,285,104"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="285,33,260,69,256,66,281,30"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="309,79,368,104"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="301,30,326,66,321,69,296,33"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="393,79,455,104"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="313,28,391,70,389,74,311,33"/>
+<area shape="rect" id="Node000003" href="$Graph_8h.html" title="Header file for the Graph class and Edge struct." alt="" coords="5,152,120,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="104,106,80,142,76,139,99,103"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="78,225,141,251"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="118,103,127,125,135,152,134,184,124,214,119,212,128,183,129,152,122,127,113,105"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="73,176,96,212,92,215,68,179"/>
+</map>

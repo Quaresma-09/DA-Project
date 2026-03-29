@@ -5,14 +5,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Conference Assignment System: RiskAnalyzer.cpp File Reference</title>
+<title>Conference Assignment Tool: src/core/RiskAnalyzer.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -25,9 +21,8 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Conference Assignment System<span id="projectnumber">&#160;DA 2026 - Project 1</span>
+   <div id="projectname">Conference Assignment Tool
    </div>
-   <div id="projectbrief">Reviewer-Submission Assignment Tool using Max-Flow</div>
   </td>
  </tr>
  </tbody>
@@ -51,23 +46,6 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('RiskAnalyzer_8cpp.html',''); initResizable(); });
-/* @license-end */
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -89,29 +67,64 @@ $(document).ready(function(){initNavTree('RiskAnalyzer_8cpp.html',''); initResiz
 </div>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_aebb8dcc11953d78e620bbef0b9e2183.html">core</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle"><div class="title">RiskAnalyzer.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Implementation of the RiskAnalyzer class.  
+<p>Implementation of the <a class="el" href="classRiskAnalyzer.html" title="Analyzes the impact of removing reviewers from the assignment problem.">RiskAnalyzer</a> class.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="RiskAnalyzer_8h_source.html">core/RiskAnalyzer.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="AssignmentEngine_8h_source.html">core/AssignmentEngine.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for RiskAnalyzer.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="RiskAnalyzer_8cpp__incl.png" border="0" usemap="#asrc_2core_2RiskAnalyzer_8cpp" alt=""/></div>
+<map name="asrc_2core_2RiskAnalyzer_8cpp" id="asrc_2core_2RiskAnalyzer_8cpp">
+<area shape="rect" title="Implementation of the RiskAnalyzer class." alt="" coords="249,5,437,31"/>
+<area shape="rect" href="RiskAnalyzer_8h.html" title="Header file for the RiskAnalyzer class." alt="" coords="171,79,322,104"/>
+<area shape="poly" title=" " alt="" coords="329,33,275,72,272,68,326,29"/>
+<area shape="rect" href="AssignmentEngine_8h.html" title="Header file for the AssignmentEngine class." alt="" coords="347,79,533,104"/>
+<area shape="poly" title=" " alt="" coords="360,29,414,68,411,72,357,33"/>
+<area shape="rect" href="Submission_8h.html" title="Header file for the Submission class." alt="" coords="185,152,340,177"/>
+<area shape="poly" title=" " alt="" coords="252,104,260,138,254,139,247,105"/>
+<area shape="rect" href="Reviewer_8h.html" title="Header file for the Reviewer class." alt="" coords="23,152,161,177"/>
+<area shape="poly" title=" " alt="" coords="223,106,131,149,128,144,221,102"/>
+<area shape="rect" href="Config_8h.html" title="Header file for the Config class." alt="" coords="364,152,484,177"/>
+<area shape="poly" title=" " alt="" coords="276,102,383,144,381,149,274,106"/>
+<area shape="rect" title=" " alt="" coords="515,299,578,324"/>
+<area shape="poly" title=" " alt="" coords="171,95,109,100,51,113,29,124,14,138,8,155,13,176,28,203,44,221,65,235,93,248,127,260,173,270,287,287,502,305,501,310,286,292,172,275,125,265,91,253,62,239,40,225,23,206,8,178,3,154,10,135,26,120,49,108,108,95,171,89"/>
+<area shape="rect" title=" " alt="" coords="233,225,292,251"/>
+<area shape="poly" title=" " alt="" coords="265,178,265,212,260,212,260,178"/>
+<area shape="rect" title=" " alt="" coords="105,225,165,251"/>
+<area shape="poly" title=" " alt="" coords="243,180,169,221,166,216,241,175"/>
+<area shape="poly" title=" " alt="" coords="120,175,223,218,221,222,118,180"/>
+<area shape="poly" title=" " alt="" coords="101,176,123,212,118,215,97,179"/>
+<area shape="poly" title=" " alt="" coords="399,180,303,222,300,217,397,175"/>
+<area shape="poly" title=" " alt="" coords="412,106,305,149,303,144,410,102"/>
+<area shape="poly" title=" " alt="" coords="385,107,162,152,161,147,383,101"/>
+<area shape="poly" title=" " alt="" coords="440,105,432,139,427,138,435,104"/>
+<area shape="poly" title=" " alt="" coords="456,102,477,123,498,151,515,185,529,222,545,285,540,286,524,224,511,188,494,153,473,127,452,106"/>
+<area shape="rect" href="Graph_8h.html" title="Header file for the Graph class and Edge struct." alt="" coords="609,225,724,251"/>
+<area shape="poly" title=" " alt="" coords="534,99,636,117,679,132,706,150,713,167,710,185,690,216,686,214,705,183,707,168,702,154,677,136,635,122,533,104"/>
+<area shape="rect" href="MaxFlow_8h.html" title="Header file for the MaxFlow class." alt="" coords="559,152,692,177"/>
+<area shape="poly" title=" " alt="" coords="471,102,583,145,581,149,469,107"/>
+<area shape="poly" title=" " alt="" coords="649,253,580,294,577,289,646,248"/>
+<area shape="poly" title=" " alt="" coords="621,179,562,288,557,285,616,177"/>
+<area shape="poly" title=" " alt="" coords="634,176,655,212,651,215,630,179"/>
+</map>
 </div>
-<p><a href="RiskAnalyzer_8cpp_source.html">Go to the source code of this file.</a></p>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Implementation of the RiskAnalyzer class. </p>
-
-<p class="definition">Definition in file <a class="el" href="RiskAnalyzer_8cpp_source.html">RiskAnalyzer.cpp</a>.</p>
+</div><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Implementation of the <a class="el" href="classRiskAnalyzer.html" title="Analyzes the impact of removing reviewers from the assignment problem.">RiskAnalyzer</a> class. </p>
 </div></div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_aebb8dcc11953d78e620bbef0b9e2183.html">core</a></li><li class="navelem"><a class="el" href="RiskAnalyzer_8cpp.html">RiskAnalyzer.cpp</a></li>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
 </body>
 </html>

@@ -5,14 +5,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Conference Assignment System: Conference Assignment System — DA Project 1</title>
+<title>Conference Assignment Tool: Conference Assignment System — DA Project 1</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -25,9 +21,8 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Conference Assignment System<span id="projectnumber">&#160;DA 2026 - Project 1</span>
+   <div id="projectname">Conference Assignment Tool
    </div>
-   <div id="projectbrief">Reviewer-Submission Assignment Tool using Max-Flow</div>
   </td>
  </tr>
  </tbody>
@@ -52,22 +47,6 @@ $(function() {
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('index.html',''); initResizable(); });
-/* @license-end */
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -90,7 +69,7 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Conference Assignment System — DA Project 1 </div></div>
+  <div class="headertitle"><div class="title">Conference <a class="el" href="structAssignment.html" title="Represents an assignment between a reviewer and a submission.">Assignment</a> System — DA Project 1 </div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="md_README"></a> </p>
@@ -102,10 +81,10 @@ Description</h1>
 Features</h1>
 <ul>
 <li><b>CSV Parsing</b>: Reads submissions, reviewers, parameters and control settings from structured CSV files.</li>
-<li><b>Max-Flow Assignment</b>: Uses Edmonds-Karp (O(V·E²)) to compute optimal reviewer-submission assignments.</li>
-<li><b>Multiple Assignment Modes</b>: Supports primary-only (mode 1), primary+secondary submission domains (mode 2), and full domain matching (mode 3).</li>
+<li><b>Max-Flow <a class="el" href="structAssignment.html" title="Represents an assignment between a reviewer and a submission.">Assignment</a></b>: Uses Edmonds-Karp (O(V·E²)) to compute optimal reviewer-submission assignments.</li>
+<li><b>Multiple <a class="el" href="structAssignment.html" title="Represents an assignment between a reviewer and a submission.">Assignment</a> Modes</b>: Supports primary-only (mode 1), primary+secondary submission domains (mode 2), and full domain matching (mode 3).</li>
 <li><b>Risk Analysis (K=1)</b>: Identifies critical reviewers whose absence would make valid assignment impossible.</li>
-<li><b>Interactive CLI Menu</b>: User-friendly menu for loading data, viewing results, and running analysis.</li>
+<li><b>Interactive CLI <a class="el" href="classMenu.html" title="Interactive CLI menu for the conference assignment system.">Menu</a></b>: User-friendly menu for loading data, viewing results, and running analysis.</li>
 <li><b>Batch Mode</b>: Scriptable execution via <code>./myProg -b input.csv output.csv</code>.</li>
 </ul>
 <h1><a class="anchor" id="autotoc_md3"></a>
@@ -139,9 +118,9 @@ Project Structure</h1>
 Flow Network Model</h1>
 <div class="fragment"><div class="line">Source → [Reviewer nodes] → [Submission nodes] → Sink</div>
 </div><!-- fragment --><ul>
-<li><b>Source → Reviewer</b>: capacity = <code>MaxReviewsPerReviewer</code></li>
-<li><b>Reviewer → Submission</b>: capacity = 1 (if expertise matches domain)</li>
-<li><b>Submission → Sink</b>: capacity = <code>MinReviewsPerSubmission</code></li>
+<li><b>Source → <a class="el" href="classReviewer.html" title="Represents a reviewer in the conference assignment system.">Reviewer</a></b>: capacity = <code>MaxReviewsPerReviewer</code></li>
+<li><b><a class="el" href="classReviewer.html" title="Represents a reviewer in the conference assignment system.">Reviewer</a> → <a class="el" href="classSubmission.html" title="Represents a paper submitted to the conference.">Submission</a></b>: capacity = 1 (if expertise matches domain)</li>
+<li><b><a class="el" href="classSubmission.html" title="Represents a paper submitted to the conference.">Submission</a> → Sink</b>: capacity = <code>MinReviewsPerSubmission</code></li>
 </ul>
 <h1><a class="anchor" id="autotoc_md9"></a>
 Documentation</h1>
@@ -149,15 +128,17 @@ Documentation</h1>
 </div><!-- fragment --><p> Output will be in <code>docs/html/</code>.</p>
 <h1><a class="anchor" id="autotoc_md10"></a>
 Authors</h1>
+<ul>
+<li>Diogo Afonso (up202406470)</li>
+<li>Gonçalo Quaresma (up202407377)</li>
+<li>Francisco Antunes (up202307639)</li>
+</ul>
 <p>DA 2026 — L.EIC016, FEUP </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
 </body>
 </html>

@@ -1,0 +1,33 @@
+<map id="include/model/Config.h" name="include/model/Config.h">
+<area shape="rect" id="Node000001" title="Header file for the Config class." alt="" coords="686,5,857,31"/>
+<area shape="rect" id="Node000002" href="$AssignmentEngine_8h.html" title="Header file for the AssignmentEngine class." alt="" coords="215,79,454,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="688,35,405,81,404,76,688,30"/>
+<area shape="rect" id="Node000010" href="$RiskAnalyzer_8h.html" title="Header file for the RiskAnalyzer class." alt="" coords="671,79,872,104"/>
+<area shape="poly" id="edge12_Node000001_Node000010" title=" " alt="" coords="774,44,774,79,769,79,769,44"/>
+<area shape="rect" id="Node000011" href="$CsvParser_8h.html" title="Header file for the CsvParser class." alt="" coords="860,152,1054,177"/>
+<area shape="poly" id="edge16_Node000001_Node000011" title=" " alt="" coords="814,34,851,53,887,77,925,115,951,150,947,153,921,119,883,81,848,57,812,39"/>
+<area shape="rect" id="Node000003" href="$OutputWriter_8h.html" title="Header file for the OutputWriter class." alt="" coords="22,152,222,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="288,111,157,154,156,149,287,106"/>
+<area shape="rect" id="Node000004" href="$Menu_8h.html" title="Header file for the Menu class." alt="" coords="508,225,646,251"/>
+<area shape="poly" id="edge8_Node000002_Node000004" title=" " alt="" coords="311,115,297,130,286,145,282,161,287,176,301,187,322,197,378,213,445,223,508,230,508,235,444,229,377,218,320,202,298,191,283,179,276,161,281,143,292,126,307,111"/>
+<area shape="rect" id="Node000005" href="$main_8cpp.html" title="Entry point for the Conference Assignment System." alt="" coords="455,299,560,324"/>
+<area shape="poly" id="edge11_Node000002_Node000005" title=" " alt="" coords="202,103,142,110,86,120,41,135,24,144,12,154,8,164,13,176,35,206,59,224,127,248,215,274,305,291,388,301,455,306,455,311,387,307,304,297,214,280,125,253,57,228,31,210,8,179,3,164,8,150,21,139,38,130,85,115,141,105,201,97"/>
+<area shape="rect" id="Node000008" href="$AssignmentEngine_8cpp.html" title="Implementation of the AssignmentEngine class." alt="" coords="296,152,522,177"/>
+<area shape="poly" id="edge9_Node000002_Node000008" title=" " alt="" coords="358,111,399,150,395,154,354,115"/>
+<area shape="rect" id="Node000009" href="$RiskAnalyzer_8cpp.html" title="Implementation of the RiskAnalyzer class." alt="" coords="546,152,734,177"/>
+<area shape="poly" id="edge10_Node000002_Node000009" title=" " alt="" coords="397,104,591,149,590,154,396,110"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="209,177,509,223,508,229,208,182"/>
+<area shape="poly" id="edge7_Node000003_Node000005" title=" " alt="" coords="126,191,132,222,139,236,149,249,171,262,203,273,285,290,376,300,455,305,455,311,375,305,284,295,201,278,169,267,146,253,135,239,127,224,120,192"/>
+<area shape="rect" id="Node000007" href="$OutputWriter_8cpp.html" title="Implementation of the OutputWriter class." alt="" coords="160,225,346,251"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="157,182,233,223,230,227,154,186"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="558,263,521,300,517,297,554,259"/>
+<area shape="rect" id="Node000006" href="$Menu_8cpp.html" title="Implementation of the Menu class." alt="" coords="584,299,708,324"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="600,259,637,297,633,300,596,263"/>
+<area shape="poly" id="edge13_Node000010_Node000004" title=" " alt="" coords="773,118,766,149,748,179,726,198,700,212,647,230,645,225,698,207,723,193,744,176,761,147,768,117"/>
+<area shape="poly" id="edge15_Node000010_Node000005" title=" " alt="" coords="780,118,782,148,774,179,759,196,736,214,673,248,602,279,542,301,540,296,600,274,671,243,733,209,756,192,769,176,777,147,775,118"/>
+<area shape="poly" id="edge14_Node000010_Node000009" title=" " alt="" coords="740,113,662,154,660,149,737,108"/>
+<area shape="poly" id="edge17_Node000011_Node000004" title=" " alt="" coords="883,182,639,228,638,223,882,177"/>
+<area shape="poly" id="edge18_Node000011_Node000005" title=" " alt="" coords="937,189,895,222,842,253,561,303,560,298,840,248,892,218,933,185"/>
+<area shape="rect" id="Node000012" href="$CsvParser_8cpp.html" title="Implementation of the CsvParser class logic." alt="" coords="911,225,1091,251"/>
+<area shape="poly" id="edge19_Node000011_Node000012" title=" " alt="" coords="974,188,996,224,992,227,969,191"/>
+</map>

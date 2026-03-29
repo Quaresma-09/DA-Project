@@ -5,14 +5,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Conference Assignment System: RiskAnalyzer Class Reference</title>
+<title>Conference Assignment Tool: RiskAnalyzer Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -25,9 +21,8 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Conference Assignment System<span id="projectnumber">&#160;DA 2026 - Project 1</span>
+   <div id="projectname">Conference Assignment Tool
    </div>
-   <div id="projectbrief">Reviewer-Submission Assignment Tool using Max-Flow</div>
   </td>
  </tr>
  </tbody>
@@ -51,23 +46,6 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('classRiskAnalyzer.html',''); initResizable(); });
-/* @license-end */
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -89,6 +67,7 @@ $(document).ready(function(){initNavTree('classRiskAnalyzer.html',''); initResiz
 </div>
 </div>
 
+</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -102,33 +81,41 @@ $(document).ready(function(){initNavTree('classRiskAnalyzer.html',''); initResiz
  <a href="classRiskAnalyzer.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="RiskAnalyzer_8h_source.html">RiskAnalyzer.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for RiskAnalyzer:</div>
+<div class="dyncontent">
+<div class="center"><img src="classRiskAnalyzer__coll__graph.png" border="0" usemap="#aRiskAnalyzer_coll__map" alt="Collaboration graph"/></div>
+<map name="aRiskAnalyzer_coll__map" id="aRiskAnalyzer_coll__map">
+<area shape="rect" title="Analyzes the impact of removing reviewers from the assignment problem." alt="" coords="5,93,112,119"/>
+<area shape="rect" href="classConfig.html" title="Manages global configuration settings for the conference assignment system." alt="" coords="27,5,90,31"/>
+<area shape="poly" title=" " alt="" coords="61,45,61,93,56,93,56,45"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:afeb8f7387e04d4e24af6a1431150f19b" id="r_afeb8f7387e04d4e24af6a1431150f19b"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRiskAnalyzer.html#afeb8f7387e04d4e24af6a1431150f19b">findCriticalReviewersForK1</a> () const</td></tr>
-<tr class="memdesc:afeb8f7387e04d4e24af6a1431150f19b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds all critical reviewers for the case K = 1.  <br /></td></tr>
-<tr class="separator:afeb8f7387e04d4e24af6a1431150f19b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d7d72ea956e6be560796fed2b0e0114" id="r_a3d7d72ea956e6be560796fed2b0e0114"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRiskAnalyzer.html#a3d7d72ea956e6be560796fed2b0e0114">RiskAnalyzer</a> (const std::vector&lt; <a class="el" href="classSubmission.html">Submission</a> &gt; &amp;<a class="el" href="classRiskAnalyzer.html#a3eb7747d587eb7b772cc9d21a5ed7b80">submissions</a>, const std::vector&lt; <a class="el" href="classReviewer.html">Reviewer</a> &gt; &amp;<a class="el" href="classRiskAnalyzer.html#aca207c01bc43ad1f96f5e323dd384861">reviewers</a>, const <a class="el" href="classConfig.html">Config</a> &amp;<a class="el" href="classRiskAnalyzer.html#aa9697f4cb12779b556894ede51b89cc1">config</a>)</td></tr>
 <tr class="memdesc:a3d7d72ea956e6be560796fed2b0e0114"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the risk analyzer with the problem data.  <br /></td></tr>
 <tr class="separator:a3d7d72ea956e6be560796fed2b0e0114"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afeb8f7387e04d4e24af6a1431150f19b" id="r_afeb8f7387e04d4e24af6a1431150f19b"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRiskAnalyzer.html#afeb8f7387e04d4e24af6a1431150f19b">findCriticalReviewersForK1</a> () const</td></tr>
+<tr class="memdesc:afeb8f7387e04d4e24af6a1431150f19b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds all critical reviewers for the case K = 1.  <br /></td></tr>
+<tr class="separator:afeb8f7387e04d4e24af6a1431150f19b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:aa9697f4cb12779b556894ede51b89cc1" id="r_aa9697f4cb12779b556894ede51b89cc1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classConfig.html">Config</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRiskAnalyzer.html#aa9697f4cb12779b556894ede51b89cc1">config</a></td></tr>
-<tr class="memdesc:aa9697f4cb12779b556894ede51b89cc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy of the configuration.  <br /></td></tr>
-<tr class="separator:aa9697f4cb12779b556894ede51b89cc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca207c01bc43ad1f96f5e323dd384861" id="r_aca207c01bc43ad1f96f5e323dd384861"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classReviewer.html">Reviewer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRiskAnalyzer.html#aca207c01bc43ad1f96f5e323dd384861">reviewers</a></td></tr>
-<tr class="memdesc:aca207c01bc43ad1f96f5e323dd384861"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy of the reviewers list.  <br /></td></tr>
-<tr class="separator:aca207c01bc43ad1f96f5e323dd384861"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3eb7747d587eb7b772cc9d21a5ed7b80" id="r_a3eb7747d587eb7b772cc9d21a5ed7b80"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classSubmission.html">Submission</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRiskAnalyzer.html#a3eb7747d587eb7b772cc9d21a5ed7b80">submissions</a></td></tr>
 <tr class="memdesc:a3eb7747d587eb7b772cc9d21a5ed7b80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy of the submissions list.  <br /></td></tr>
 <tr class="separator:a3eb7747d587eb7b772cc9d21a5ed7b80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca207c01bc43ad1f96f5e323dd384861" id="r_aca207c01bc43ad1f96f5e323dd384861"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classReviewer.html">Reviewer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRiskAnalyzer.html#aca207c01bc43ad1f96f5e323dd384861">reviewers</a></td></tr>
+<tr class="memdesc:aca207c01bc43ad1f96f5e323dd384861"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy of the reviewers list.  <br /></td></tr>
+<tr class="separator:aca207c01bc43ad1f96f5e323dd384861"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9697f4cb12779b556894ede51b89cc1" id="r_aa9697f4cb12779b556894ede51b89cc1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classConfig.html">Config</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRiskAnalyzer.html#aa9697f4cb12779b556894ede51b89cc1">config</a></td></tr>
+<tr class="memdesc:aa9697f4cb12779b556894ede51b89cc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy of the configuration.  <br /></td></tr>
+<tr class="separator:aa9697f4cb12779b556894ede51b89cc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Analyzes the impact of removing reviewers from the assignment problem. </p>
 <p>For Risk Analysis with K = 1, each reviewer is removed one at a time and the assignment problem is solved again. If the assignment becomes invalid (i.e., max flow &lt; required flow), that reviewer is critical. </p>
-
-<p class="definition">Definition at line <a class="el" href="RiskAnalyzer_8h_source.html#l00026">26</a> of file <a class="el" href="RiskAnalyzer_8h_source.html">RiskAnalyzer.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a3d7d72ea956e6be560796fed2b0e0114" name="a3d7d72ea956e6be560796fed2b0e0114"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3d7d72ea956e6be560796fed2b0e0114">&#9670;&#160;</a></span>RiskAnalyzer()</h2>
@@ -172,8 +159,6 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="RiskAnalyzer_8cpp_source.html#l00009">9</a> of file <a class="el" href="RiskAnalyzer_8cpp_source.html">RiskAnalyzer.cpp</a>.</p>
-
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -195,13 +180,7 @@ Private Attributes</h2></td></tr>
 <p>Finds all critical reviewers for the case K = 1. </p>
 <p>A reviewer is considered critical if removing that reviewer makes it impossible to obtain a valid complete assignment (i.e., the max flow drops below the required flow).</p>
 <dl class="section return"><dt>Returns</dt><dd>A vector of reviewer IDs that are critical.</dd></dl>
-<p>\par Complexity: O(R * V * E^2) where R = number of reviewers, V = vertices in the flow network, E = edges. </p>
-
-<p class="definition">Definition at line <a class="el" href="RiskAnalyzer_8cpp_source.html#l00016">16</a> of file <a class="el" href="RiskAnalyzer_8cpp_source.html">RiskAnalyzer.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="RiskAnalyzer_8h_source.html#l00030">config</a>, <a class="el" href="AssignmentEngine_8cpp_source.html#l00185">AssignmentEngine::getRequiredFlow()</a>, <a class="el" href="RiskAnalyzer_8h_source.html#l00029">reviewers</a>, <a class="el" href="AssignmentEngine_8cpp_source.html#l00176">AssignmentEngine::solveBaseAssignment()</a>, and <a class="el" href="RiskAnalyzer_8h_source.html#l00028">submissions</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l00032">runBatchMode()</a>, and <a class="el" href="Menu_8cpp_source.html#l00168">Menu::runRiskAnalysis()</a>.</p>
+<p>@complexity O(R * V * E^2) where R = number of reviewers, V = vertices in the flow network, E = edges. </p>
 
 </div>
 </div>
@@ -228,10 +207,6 @@ Private Attributes</h2></td></tr>
 
 <p>Copy of the configuration. </p>
 
-<p class="definition">Definition at line <a class="el" href="RiskAnalyzer_8h_source.html#l00030">30</a> of file <a class="el" href="RiskAnalyzer_8h_source.html">RiskAnalyzer.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="RiskAnalyzer_8cpp_source.html#l00016">findCriticalReviewersForK1()</a>.</p>
-
 </div>
 </div>
 <a id="aca207c01bc43ad1f96f5e323dd384861" name="aca207c01bc43ad1f96f5e323dd384861"></a>
@@ -255,10 +230,6 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Copy of the reviewers list. </p>
-
-<p class="definition">Definition at line <a class="el" href="RiskAnalyzer_8h_source.html#l00029">29</a> of file <a class="el" href="RiskAnalyzer_8h_source.html">RiskAnalyzer.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="RiskAnalyzer_8cpp_source.html#l00016">findCriticalReviewersForK1()</a>.</p>
 
 </div>
 </div>
@@ -284,24 +255,16 @@ Private Attributes</h2></td></tr>
 
 <p>Copy of the submissions list. </p>
 
-<p class="definition">Definition at line <a class="el" href="RiskAnalyzer_8h_source.html#l00028">28</a> of file <a class="el" href="RiskAnalyzer_8h_source.html">RiskAnalyzer.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="RiskAnalyzer_8cpp_source.html#l00016">findCriticalReviewersForK1()</a>.</p>
-
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="RiskAnalyzer_8h_source.html">RiskAnalyzer.h</a></li>
-<li><a class="el" href="RiskAnalyzer_8cpp_source.html">RiskAnalyzer.cpp</a></li>
+<li>include/core/<a class="el" href="RiskAnalyzer_8h_source.html">RiskAnalyzer.h</a></li>
+<li>src/core/<a class="el" href="RiskAnalyzer_8cpp.html">RiskAnalyzer.cpp</a></li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="classRiskAnalyzer.html">RiskAnalyzer</a></li>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
 </body>
 </html>

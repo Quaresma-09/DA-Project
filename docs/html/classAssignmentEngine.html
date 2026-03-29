@@ -5,14 +5,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Conference Assignment System: AssignmentEngine Class Reference</title>
+<title>Conference Assignment Tool: AssignmentEngine Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -25,9 +21,8 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Conference Assignment System<span id="projectnumber">&#160;DA 2026 - Project 1</span>
+   <div id="projectname">Conference Assignment Tool
    </div>
-   <div id="projectbrief">Reviewer-Submission Assignment Tool using Max-Flow</div>
   </td>
  </tr>
  </tbody>
@@ -51,23 +46,6 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('classAssignmentEngine.html',''); initResizable(); });
-/* @license-end */
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -89,6 +67,7 @@ $(document).ready(function(){initNavTree('classAssignmentEngine.html',''); initR
 </div>
 </div>
 
+</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -103,88 +82,102 @@ $(document).ready(function(){initNavTree('classAssignmentEngine.html',''); initR
  <a href="classAssignmentEngine.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="AssignmentEngine_8h_source.html">AssignmentEngine.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for AssignmentEngine:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAssignmentEngine__coll__graph.png" border="0" usemap="#aAssignmentEngine_coll__map" alt="Collaboration graph"/></div>
+<map name="aAssignmentEngine_coll__map" id="aAssignmentEngine_coll__map">
+<area shape="rect" title="Builds and solves the reviewer assignment problem using max&#45;flow." alt="" coords="52,93,195,119"/>
+<area shape="rect" href="classConfig.html" title="Manages global configuration settings for the conference assignment system." alt="" coords="5,5,68,31"/>
+<area shape="poly" title=" " alt="" coords="53,40,76,67,106,91,103,95,72,71,49,44"/>
+<area shape="rect" href="classGraph.html" title="Directed graph implemented with adjacency lists." alt="" coords="93,5,154,31"/>
+<area shape="poly" title=" " alt="" coords="126,45,126,93,121,93,121,45"/>
+<area shape="rect" href="classMaxFlow.html" title="Implements the Edmonds&#45;Karp algorithm for maximum flow." alt="" coords="179,5,260,31"/>
+<area shape="poly" title=" " alt="" coords="201,43,172,71,141,95,138,91,168,67,198,39"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a1ff820e1c0ca901706ff4b4f688e081c" id="r_a1ff820e1c0ca901706ff4b4f688e081c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssignmentEngine.html#a1ff820e1c0ca901706ff4b4f688e081c">AssignmentEngine</a> (const std::vector&lt; <a class="el" href="classSubmission.html">Submission</a> &gt; &amp;<a class="el" href="classAssignmentEngine.html#abd7cc59cef40650495ec5aa7646bb2f5">submissions</a>, const std::vector&lt; <a class="el" href="classReviewer.html">Reviewer</a> &gt; &amp;<a class="el" href="classAssignmentEngine.html#af43a11e3785dcf74cd12dde41cb46271">reviewers</a>, const <a class="el" href="classConfig.html">Config</a> &amp;<a class="el" href="classAssignmentEngine.html#a5f58b86e3b3d4fe1d86180f186413456">config</a>)</td></tr>
 <tr class="memdesc:a1ff820e1c0ca901706ff4b4f688e081c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the assignment engine.  <br /></td></tr>
 <tr class="separator:a1ff820e1c0ca901706ff4b4f688e081c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8963fa54b8794a569def89b5b87c2c9c" id="r_a8963fa54b8794a569def89b5b87c2c9c"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="structAssignment.html">Assignment</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssignmentEngine.html#a8963fa54b8794a569def89b5b87c2c9c">getAssignments</a> () const</td></tr>
-<tr class="memdesc:a8963fa54b8794a569def89b5b87c2c9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the computed assignments.  <br /></td></tr>
-<tr class="separator:a8963fa54b8794a569def89b5b87c2c9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a300405065d9faa56bdecefac8606cb3d" id="r_a300405065d9faa56bdecefac8606cb3d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssignmentEngine.html#a300405065d9faa56bdecefac8606cb3d">getLastComputedFlow</a> () const</td></tr>
-<tr class="memdesc:a300405065d9faa56bdecefac8606cb3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the computed flow.  <br /></td></tr>
-<tr class="separator:a300405065d9faa56bdecefac8606cb3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39e62722e1bbf4b6788f5e56062167d3" id="r_a39e62722e1bbf4b6788f5e56062167d3"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="structMissingReview.html">MissingReview</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssignmentEngine.html#a39e62722e1bbf4b6788f5e56062167d3">getMissingReviews</a> () const</td></tr>
-<tr class="memdesc:a39e62722e1bbf4b6788f5e56062167d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns missing reviews for submissions.  <br /></td></tr>
-<tr class="separator:a39e62722e1bbf4b6788f5e56062167d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46a1d0969f252a35e3fc5e4733fb28b4" id="r_a46a1d0969f252a35e3fc5e4733fb28b4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssignmentEngine.html#a46a1d0969f252a35e3fc5e4733fb28b4">getRequiredFlow</a> () const</td></tr>
-<tr class="memdesc:a46a1d0969f252a35e3fc5e4733fb28b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the required total flow.  <br /></td></tr>
-<tr class="separator:a46a1d0969f252a35e3fc5e4733fb28b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68249e71925cf9c73d191fdb7395117c" id="r_a68249e71925cf9c73d191fdb7395117c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssignmentEngine.html#a68249e71925cf9c73d191fdb7395117c">hasValidAssignment</a> () const</td></tr>
-<tr class="memdesc:a68249e71925cf9c73d191fdb7395117c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a valid assignment exists.  <br /></td></tr>
-<tr class="separator:a68249e71925cf9c73d191fdb7395117c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a03358b9530db649ce8503de12449eb53" id="r_a03358b9530db649ce8503de12449eb53"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssignmentEngine.html#a03358b9530db649ce8503de12449eb53">solveBaseAssignment</a> ()</td></tr>
 <tr class="memdesc:a03358b9530db649ce8503de12449eb53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves the assignment problem using max-flow.  <br /></td></tr>
 <tr class="separator:a03358b9530db649ce8503de12449eb53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46a1d0969f252a35e3fc5e4733fb28b4" id="r_a46a1d0969f252a35e3fc5e4733fb28b4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssignmentEngine.html#a46a1d0969f252a35e3fc5e4733fb28b4">getRequiredFlow</a> () const</td></tr>
+<tr class="memdesc:a46a1d0969f252a35e3fc5e4733fb28b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the required total flow.  <br /></td></tr>
+<tr class="separator:a46a1d0969f252a35e3fc5e4733fb28b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a300405065d9faa56bdecefac8606cb3d" id="r_a300405065d9faa56bdecefac8606cb3d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssignmentEngine.html#a300405065d9faa56bdecefac8606cb3d">getLastComputedFlow</a> () const</td></tr>
+<tr class="memdesc:a300405065d9faa56bdecefac8606cb3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the computed flow.  <br /></td></tr>
+<tr class="separator:a300405065d9faa56bdecefac8606cb3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68249e71925cf9c73d191fdb7395117c" id="r_a68249e71925cf9c73d191fdb7395117c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssignmentEngine.html#a68249e71925cf9c73d191fdb7395117c">hasValidAssignment</a> () const</td></tr>
+<tr class="memdesc:a68249e71925cf9c73d191fdb7395117c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a valid assignment exists.  <br /></td></tr>
+<tr class="separator:a68249e71925cf9c73d191fdb7395117c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8963fa54b8794a569def89b5b87c2c9c" id="r_a8963fa54b8794a569def89b5b87c2c9c"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="structAssignment.html">Assignment</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssignmentEngine.html#a8963fa54b8794a569def89b5b87c2c9c">getAssignments</a> () const</td></tr>
+<tr class="memdesc:a8963fa54b8794a569def89b5b87c2c9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the computed assignments.  <br /></td></tr>
+<tr class="separator:a8963fa54b8794a569def89b5b87c2c9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39e62722e1bbf4b6788f5e56062167d3" id="r_a39e62722e1bbf4b6788f5e56062167d3"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="structMissingReview.html">MissingReview</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssignmentEngine.html#a39e62722e1bbf4b6788f5e56062167d3">getMissingReviews</a> () const</td></tr>
+<tr class="memdesc:a39e62722e1bbf4b6788f5e56062167d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns missing reviews for submissions.  <br /></td></tr>
+<tr class="separator:a39e62722e1bbf4b6788f5e56062167d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a61d5f71072d235c4f864cbf44cd31e1f" id="r_a61d5f71072d235c4f864cbf44cd31e1f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssignmentEngine.html#a61d5f71072d235c4f864cbf44cd31e1f">buildBaseGraph</a> ()</td></tr>
-<tr class="memdesc:a61d5f71072d235c4f864cbf44cd31e1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds the flow network based on the current assignment mode.  <br /></td></tr>
-<tr class="separator:a61d5f71072d235c4f864cbf44cd31e1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5cb6ae02a1103b58db3431fdb5be3065" id="r_a5cb6ae02a1103b58db3431fdb5be3065"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssignmentEngine.html#a5cb6ae02a1103b58db3431fdb5be3065">calculateMissingReviews</a> ()</td></tr>
-<tr class="memdesc:a5cb6ae02a1103b58db3431fdb5be3065"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates missing reviews for each submission.  <br /></td></tr>
-<tr class="separator:a5cb6ae02a1103b58db3431fdb5be3065"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a138efb6a03926cc057382cd4ac369a2c" id="r_a138efb6a03926cc057382cd4ac369a2c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssignmentEngine.html#a138efb6a03926cc057382cd4ac369a2c">extractAssignments</a> ()</td></tr>
-<tr class="memdesc:a138efb6a03926cc057382cd4ac369a2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extracts assignments from the computed flow.  <br /></td></tr>
-<tr class="separator:a138efb6a03926cc057382cd4ac369a2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a578252a473a27f736d883dab3e51a51c" id="r_a578252a473a27f736d883dab3e51a51c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssignmentEngine.html#a578252a473a27f736d883dab3e51a51c">getMatchTopic</a> (const <a class="el" href="classReviewer.html">Reviewer</a> &amp;reviewer, const <a class="el" href="classSubmission.html">Submission</a> &amp;submission) const</td></tr>
-<tr class="memdesc:a578252a473a27f736d883dab3e51a51c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines the matched topic between a reviewer and submission.  <br /></td></tr>
-<tr class="separator:a578252a473a27f736d883dab3e51a51c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6d8926e7f6871b5d8838adb1959493c" id="r_ab6d8926e7f6871b5d8838adb1959493c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssignmentEngine.html#ab6d8926e7f6871b5d8838adb1959493c">getReviewerIndexFromNode</a> (int node) const</td></tr>
-<tr class="separator:ab6d8926e7f6871b5d8838adb1959493c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d6a495976de29d22ef654e9f02193e5" id="r_a3d6a495976de29d22ef654e9f02193e5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssignmentEngine.html#a3d6a495976de29d22ef654e9f02193e5">getReviewerNode</a> (int reviewerIndex) const</td></tr>
-<tr class="separator:a3d6a495976de29d22ef654e9f02193e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c1fa4b973f2aa3e4b41c36af7b9ef0f" id="r_a6c1fa4b973f2aa3e4b41c36af7b9ef0f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssignmentEngine.html#a6c1fa4b973f2aa3e4b41c36af7b9ef0f">getSubmissionIndexFromNode</a> (int node) const</td></tr>
-<tr class="separator:a6c1fa4b973f2aa3e4b41c36af7b9ef0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11f6f9c8e4189f69d5722b86a2e409c2" id="r_a11f6f9c8e4189f69d5722b86a2e409c2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssignmentEngine.html#a11f6f9c8e4189f69d5722b86a2e409c2">getSubmissionNode</a> (int submissionIndex) const</td></tr>
-<tr class="separator:a11f6f9c8e4189f69d5722b86a2e409c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac281d2305651dfa842eab18ef66ac2d6" id="r_ac281d2305651dfa842eab18ef66ac2d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssignmentEngine.html#ac281d2305651dfa842eab18ef66ac2d6">initializeGraph</a> ()</td></tr>
 <tr class="memdesc:ac281d2305651dfa842eab18ef66ac2d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the graph structure.  <br /></td></tr>
 <tr class="separator:ac281d2305651dfa842eab18ef66ac2d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61d5f71072d235c4f864cbf44cd31e1f" id="r_a61d5f71072d235c4f864cbf44cd31e1f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssignmentEngine.html#a61d5f71072d235c4f864cbf44cd31e1f">buildBaseGraph</a> ()</td></tr>
+<tr class="memdesc:a61d5f71072d235c4f864cbf44cd31e1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds the flow network based on the current assignment mode.  <br /></td></tr>
+<tr class="separator:a61d5f71072d235c4f864cbf44cd31e1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a138efb6a03926cc057382cd4ac369a2c" id="r_a138efb6a03926cc057382cd4ac369a2c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssignmentEngine.html#a138efb6a03926cc057382cd4ac369a2c">extractAssignments</a> ()</td></tr>
+<tr class="memdesc:a138efb6a03926cc057382cd4ac369a2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extracts assignments from the computed flow.  <br /></td></tr>
+<tr class="separator:a138efb6a03926cc057382cd4ac369a2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cb6ae02a1103b58db3431fdb5be3065" id="r_a5cb6ae02a1103b58db3431fdb5be3065"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssignmentEngine.html#a5cb6ae02a1103b58db3431fdb5be3065">calculateMissingReviews</a> ()</td></tr>
+<tr class="memdesc:a5cb6ae02a1103b58db3431fdb5be3065"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates missing reviews for each submission.  <br /></td></tr>
+<tr class="separator:a5cb6ae02a1103b58db3431fdb5be3065"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26a65f0ba938edb726e440cb29f5718b" id="r_a26a65f0ba938edb726e440cb29f5718b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssignmentEngine.html#a26a65f0ba938edb726e440cb29f5718b">isCompatible</a> (const <a class="el" href="classReviewer.html">Reviewer</a> &amp;reviewer, const <a class="el" href="classSubmission.html">Submission</a> &amp;submission) const</td></tr>
 <tr class="memdesc:a26a65f0ba938edb726e440cb29f5718b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a reviewer is compatible with a submission.  <br /></td></tr>
 <tr class="separator:a26a65f0ba938edb726e440cb29f5718b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a578252a473a27f736d883dab3e51a51c" id="r_a578252a473a27f736d883dab3e51a51c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssignmentEngine.html#a578252a473a27f736d883dab3e51a51c">getMatchTopic</a> (const <a class="el" href="classReviewer.html">Reviewer</a> &amp;reviewer, const <a class="el" href="classSubmission.html">Submission</a> &amp;submission) const</td></tr>
+<tr class="memdesc:a578252a473a27f736d883dab3e51a51c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines the matched topic between a reviewer and submission.  <br /></td></tr>
+<tr class="separator:a578252a473a27f736d883dab3e51a51c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d6a495976de29d22ef654e9f02193e5" id="r_a3d6a495976de29d22ef654e9f02193e5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssignmentEngine.html#a3d6a495976de29d22ef654e9f02193e5">getReviewerNode</a> (int reviewerIndex) const</td></tr>
+<tr class="separator:a3d6a495976de29d22ef654e9f02193e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11f6f9c8e4189f69d5722b86a2e409c2" id="r_a11f6f9c8e4189f69d5722b86a2e409c2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssignmentEngine.html#a11f6f9c8e4189f69d5722b86a2e409c2">getSubmissionNode</a> (int submissionIndex) const</td></tr>
+<tr class="separator:a11f6f9c8e4189f69d5722b86a2e409c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6d8926e7f6871b5d8838adb1959493c" id="r_ab6d8926e7f6871b5d8838adb1959493c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssignmentEngine.html#ab6d8926e7f6871b5d8838adb1959493c">getReviewerIndexFromNode</a> (int node) const</td></tr>
+<tr class="separator:ab6d8926e7f6871b5d8838adb1959493c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c1fa4b973f2aa3e4b41c36af7b9ef0f" id="r_a6c1fa4b973f2aa3e4b41c36af7b9ef0f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssignmentEngine.html#a6c1fa4b973f2aa3e4b41c36af7b9ef0f">getSubmissionIndexFromNode</a> (int node) const</td></tr>
+<tr class="separator:a6c1fa4b973f2aa3e4b41c36af7b9ef0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:afc2833556d449fa9f14df00e66ea511e" id="r_afc2833556d449fa9f14df00e66ea511e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structAssignment.html">Assignment</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssignmentEngine.html#afc2833556d449fa9f14df00e66ea511e">assignments</a></td></tr>
-<tr class="separator:afc2833556d449fa9f14df00e66ea511e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd7cc59cef40650495ec5aa7646bb2f5" id="r_abd7cc59cef40650495ec5aa7646bb2f5"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classSubmission.html">Submission</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssignmentEngine.html#abd7cc59cef40650495ec5aa7646bb2f5">submissions</a></td></tr>
+<tr class="separator:abd7cc59cef40650495ec5aa7646bb2f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af43a11e3785dcf74cd12dde41cb46271" id="r_af43a11e3785dcf74cd12dde41cb46271"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classReviewer.html">Reviewer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssignmentEngine.html#af43a11e3785dcf74cd12dde41cb46271">reviewers</a></td></tr>
+<tr class="separator:af43a11e3785dcf74cd12dde41cb46271"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f58b86e3b3d4fe1d86180f186413456" id="r_a5f58b86e3b3d4fe1d86180f186413456"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classConfig.html">Config</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssignmentEngine.html#a5f58b86e3b3d4fe1d86180f186413456">config</a></td></tr>
 <tr class="separator:a5f58b86e3b3d4fe1d86180f186413456"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0179ce819157fc17c02b87e89075b952" id="r_a0179ce819157fc17c02b87e89075b952"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGraph.html">Graph</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssignmentEngine.html#a0179ce819157fc17c02b87e89075b952">graph</a></td></tr>
 <tr class="separator:a0179ce819157fc17c02b87e89075b952"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a522a5e22b0e31b51fcef091a11a31174" id="r_a522a5e22b0e31b51fcef091a11a31174"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssignmentEngine.html#a522a5e22b0e31b51fcef091a11a31174">lastComputedFlow</a></td></tr>
-<tr class="separator:a522a5e22b0e31b51fcef091a11a31174"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a556653a13142d7eb43bdc898ee29d2a0" id="r_a556653a13142d7eb43bdc898ee29d2a0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMaxFlow.html">MaxFlow</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssignmentEngine.html#a556653a13142d7eb43bdc898ee29d2a0">maxFlow</a></td></tr>
 <tr class="separator:a556653a13142d7eb43bdc898ee29d2a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a7f03b2adc6f50d1618a529a697cd2b" id="r_a2a7f03b2adc6f50d1618a529a697cd2b"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structMissingReview.html">MissingReview</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssignmentEngine.html#a2a7f03b2adc6f50d1618a529a697cd2b">missingReviews</a></td></tr>
-<tr class="separator:a2a7f03b2adc6f50d1618a529a697cd2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7987f7e764d08b35fd87644bfc0ee18c" id="r_a7987f7e764d08b35fd87644bfc0ee18c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssignmentEngine.html#a7987f7e764d08b35fd87644bfc0ee18c">reviewerOffset</a></td></tr>
-<tr class="separator:a7987f7e764d08b35fd87644bfc0ee18c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af43a11e3785dcf74cd12dde41cb46271" id="r_af43a11e3785dcf74cd12dde41cb46271"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classReviewer.html">Reviewer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssignmentEngine.html#af43a11e3785dcf74cd12dde41cb46271">reviewers</a></td></tr>
-<tr class="separator:af43a11e3785dcf74cd12dde41cb46271"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a28a79b3fc7100c1dfba6706e7bfa0dc5" id="r_a28a79b3fc7100c1dfba6706e7bfa0dc5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssignmentEngine.html#a28a79b3fc7100c1dfba6706e7bfa0dc5">sink</a></td></tr>
-<tr class="separator:a28a79b3fc7100c1dfba6706e7bfa0dc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af55c22038bf0b207c70c063864572fb7" id="r_af55c22038bf0b207c70c063864572fb7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssignmentEngine.html#af55c22038bf0b207c70c063864572fb7">source</a></td></tr>
 <tr class="separator:af55c22038bf0b207c70c063864572fb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28a79b3fc7100c1dfba6706e7bfa0dc5" id="r_a28a79b3fc7100c1dfba6706e7bfa0dc5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssignmentEngine.html#a28a79b3fc7100c1dfba6706e7bfa0dc5">sink</a></td></tr>
+<tr class="separator:a28a79b3fc7100c1dfba6706e7bfa0dc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7987f7e764d08b35fd87644bfc0ee18c" id="r_a7987f7e764d08b35fd87644bfc0ee18c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssignmentEngine.html#a7987f7e764d08b35fd87644bfc0ee18c">reviewerOffset</a></td></tr>
+<tr class="separator:a7987f7e764d08b35fd87644bfc0ee18c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae30efb81cddbd09cd01311d71b6e7085" id="r_ae30efb81cddbd09cd01311d71b6e7085"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssignmentEngine.html#ae30efb81cddbd09cd01311d71b6e7085">submissionOffset</a></td></tr>
 <tr class="separator:ae30efb81cddbd09cd01311d71b6e7085"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd7cc59cef40650495ec5aa7646bb2f5" id="r_abd7cc59cef40650495ec5aa7646bb2f5"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classSubmission.html">Submission</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssignmentEngine.html#abd7cc59cef40650495ec5aa7646bb2f5">submissions</a></td></tr>
-<tr class="separator:abd7cc59cef40650495ec5aa7646bb2f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2f25086ff0e9f61803bbbd925722185" id="r_af2f25086ff0e9f61803bbbd925722185"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssignmentEngine.html#af2f25086ff0e9f61803bbbd925722185">totalNodes</a></td></tr>
 <tr class="separator:af2f25086ff0e9f61803bbbd925722185"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a522a5e22b0e31b51fcef091a11a31174" id="r_a522a5e22b0e31b51fcef091a11a31174"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssignmentEngine.html#a522a5e22b0e31b51fcef091a11a31174">lastComputedFlow</a></td></tr>
+<tr class="separator:a522a5e22b0e31b51fcef091a11a31174"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc2833556d449fa9f14df00e66ea511e" id="r_afc2833556d449fa9f14df00e66ea511e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structAssignment.html">Assignment</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssignmentEngine.html#afc2833556d449fa9f14df00e66ea511e">assignments</a></td></tr>
+<tr class="separator:afc2833556d449fa9f14df00e66ea511e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a7f03b2adc6f50d1618a529a697cd2b" id="r_a2a7f03b2adc6f50d1618a529a697cd2b"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structMissingReview.html">MissingReview</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssignmentEngine.html#a2a7f03b2adc6f50d1618a529a697cd2b">missingReviews</a></td></tr>
+<tr class="separator:a2a7f03b2adc6f50d1618a529a697cd2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Builds and solves the reviewer assignment problem using max-flow. </p>
@@ -193,9 +186,7 @@ Private Attributes</h2></td></tr>
 <li>Mode 2: Primary + Secondary submission domains, Primary reviewer expertise.</li>
 <li>Mode 3: All primary and secondary domains of both.</li>
 </ul>
-<p>\par Complexity: O(V * E^2) for the max-flow computation. </p>
-
-<p class="definition">Definition at line <a class="el" href="AssignmentEngine_8h_source.html#l00042">42</a> of file <a class="el" href="AssignmentEngine_8h_source.html">AssignmentEngine.h</a>.</p>
+<p>@complexity O(V * E^2) for the max-flow computation. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a1ff820e1c0ca901706ff4b4f688e081c" name="a1ff820e1c0ca901706ff4b4f688e081c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1ff820e1c0ca901706ff4b4f688e081c">&#9670;&#160;</a></span>AssignmentEngine()</h2>
@@ -231,10 +222,6 @@ Private Attributes</h2></td></tr>
 
 <p>Constructs the assignment engine. </p>
 
-<p class="definition">Definition at line <a class="el" href="AssignmentEngine_8cpp_source.html#l00003">3</a> of file <a class="el" href="AssignmentEngine_8cpp_source.html">AssignmentEngine.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="AssignmentEngine_8h_source.html#l00048">graph</a>, <a class="el" href="AssignmentEngine_8h_source.html#l00052">sink</a>, <a class="el" href="AssignmentEngine_8h_source.html#l00054">submissionOffset</a>, <a class="el" href="AssignmentEngine_8h_source.html#l00044">submissions</a>, and <a class="el" href="AssignmentEngine_8h_source.html#l00055">totalNodes</a>.</p>
-
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -262,13 +249,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Builds the flow network based on the current assignment mode. </p>
-<p>\par Complexity: O(R * S) </p>
-
-<p class="definition">Definition at line <a class="el" href="AssignmentEngine_8cpp_source.html#l00104">104</a> of file <a class="el" href="AssignmentEngine_8cpp_source.html">AssignmentEngine.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="Graph_8cpp_source.html#l00015">Graph::addEdge()</a>, <a class="el" href="AssignmentEngine_8h_source.html#l00046">config</a>, <a class="el" href="Config_8h_source.html#l00045">Config::getMaxReviewsPerReviewer()</a>, <a class="el" href="Config_8h_source.html#l00039">Config::getMinReviewsPerSubmission()</a>, <a class="el" href="AssignmentEngine_8cpp_source.html#l00088">getReviewerNode()</a>, <a class="el" href="AssignmentEngine_8cpp_source.html#l00092">getSubmissionNode()</a>, <a class="el" href="AssignmentEngine_8h_source.html#l00048">graph</a>, <a class="el" href="AssignmentEngine_8cpp_source.html#l00029">isCompatible()</a>, <a class="el" href="AssignmentEngine_8h_source.html#l00045">reviewers</a>, <a class="el" href="AssignmentEngine_8h_source.html#l00052">sink</a>, <a class="el" href="AssignmentEngine_8h_source.html#l00051">source</a>, and <a class="el" href="AssignmentEngine_8h_source.html#l00044">submissions</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="AssignmentEngine_8cpp_source.html#l00176">solveBaseAssignment()</a>.</p>
+<p>@complexity O(R * S) </p>
 
 </div>
 </div>
@@ -296,13 +277,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Calculates missing reviews for each submission. </p>
-<p>\par Complexity: O(S) </p>
-
-<p class="definition">Definition at line <a class="el" href="AssignmentEngine_8cpp_source.html#l00148">148</a> of file <a class="el" href="AssignmentEngine_8cpp_source.html">AssignmentEngine.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="AssignmentEngine_8h_source.html#l00046">config</a>, <a class="el" href="Graph_8cpp_source.html#l00023">Graph::getAdj()</a>, <a class="el" href="Config_8h_source.html#l00039">Config::getMinReviewsPerSubmission()</a>, <a class="el" href="AssignmentEngine_8cpp_source.html#l00092">getSubmissionNode()</a>, <a class="el" href="AssignmentEngine_8h_source.html#l00048">graph</a>, <a class="el" href="AssignmentEngine_8h_source.html#l00027">MissingReview::missingReviews</a>, <a class="el" href="AssignmentEngine_8h_source.html#l00059">missingReviews</a>, <a class="el" href="AssignmentEngine_8h_source.html#l00052">sink</a>, <a class="el" href="AssignmentEngine_8h_source.html#l00025">MissingReview::submissionId</a>, <a class="el" href="AssignmentEngine_8h_source.html#l00044">submissions</a>, and <a class="el" href="AssignmentEngine_8h_source.html#l00026">MissingReview::topic</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="AssignmentEngine_8cpp_source.html#l00176">solveBaseAssignment()</a>.</p>
+<p>@complexity O(S) </p>
 
 </div>
 </div>
@@ -330,13 +305,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Extracts assignments from the computed flow. </p>
-<p>\par Complexity: O(R * S) </p>
-
-<p class="definition">Definition at line <a class="el" href="AssignmentEngine_8cpp_source.html#l00127">127</a> of file <a class="el" href="AssignmentEngine_8cpp_source.html">AssignmentEngine.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="AssignmentEngine_8h_source.html#l00058">assignments</a>, <a class="el" href="Graph_8cpp_source.html#l00023">Graph::getAdj()</a>, <a class="el" href="AssignmentEngine_8cpp_source.html#l00057">getMatchTopic()</a>, <a class="el" href="AssignmentEngine_8cpp_source.html#l00088">getReviewerNode()</a>, <a class="el" href="AssignmentEngine_8cpp_source.html#l00100">getSubmissionIndexFromNode()</a>, <a class="el" href="AssignmentEngine_8h_source.html#l00048">graph</a>, <a class="el" href="AssignmentEngine_8h_source.html#l00016">Assignment::reviewerId</a>, <a class="el" href="AssignmentEngine_8h_source.html#l00045">reviewers</a>, <a class="el" href="AssignmentEngine_8h_source.html#l00052">sink</a>, <a class="el" href="AssignmentEngine_8h_source.html#l00017">Assignment::submissionId</a>, <a class="el" href="AssignmentEngine_8h_source.html#l00054">submissionOffset</a>, <a class="el" href="AssignmentEngine_8h_source.html#l00044">submissions</a>, and <a class="el" href="AssignmentEngine_8h_source.html#l00018">Assignment::topic</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="AssignmentEngine_8cpp_source.html#l00176">solveBaseAssignment()</a>.</p>
+<p>@complexity O(R * S) </p>
 
 </div>
 </div>
@@ -357,12 +326,6 @@ Private Attributes</h2></td></tr>
 
 <p>Returns the computed assignments. </p>
 
-<p class="definition">Definition at line <a class="el" href="AssignmentEngine_8cpp_source.html#l00197">197</a> of file <a class="el" href="AssignmentEngine_8cpp_source.html">AssignmentEngine.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="AssignmentEngine_8h_source.html#l00058">assignments</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="Menu_8cpp_source.html#l00114">Menu::generateAssignment()</a>, and <a class="el" href="main_8cpp_source.html#l00032">runBatchMode()</a>.</p>
-
 </div>
 </div>
 <a id="a300405065d9faa56bdecefac8606cb3d" name="a300405065d9faa56bdecefac8606cb3d"></a>
@@ -381,10 +344,6 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the computed flow. </p>
-
-<p class="definition">Definition at line <a class="el" href="AssignmentEngine_8cpp_source.html#l00189">189</a> of file <a class="el" href="AssignmentEngine_8cpp_source.html">AssignmentEngine.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="AssignmentEngine_8h_source.html#l00056">lastComputedFlow</a>.</p>
 
 </div>
 </div>
@@ -423,13 +382,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Determines the matched topic between a reviewer and submission. </p>
-<p>\par Complexity: O(1) </p>
-
-<p class="definition">Definition at line <a class="el" href="AssignmentEngine_8cpp_source.html#l00057">57</a> of file <a class="el" href="AssignmentEngine_8cpp_source.html">AssignmentEngine.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="AssignmentEngine_8h_source.html#l00046">config</a>, <a class="el" href="Config_8h_source.html#l00051">Config::getGenerateAssignments()</a>, <a class="el" href="Reviewer_8h_source.html#l00063">Reviewer::getPrimaryExpertise()</a>, <a class="el" href="Submission_8h_source.html#l00071">Submission::getPrimaryTopic()</a>, <a class="el" href="Reviewer_8h_source.html#l00069">Reviewer::getSecondaryExpertise()</a>, and <a class="el" href="Submission_8h_source.html#l00077">Submission::getSecondaryTopic()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="AssignmentEngine_8cpp_source.html#l00127">extractAssignments()</a>.</p>
+<p>@complexity O(1) </p>
 
 </div>
 </div>
@@ -450,12 +403,6 @@ Private Attributes</h2></td></tr>
 
 <p>Returns missing reviews for submissions. </p>
 
-<p class="definition">Definition at line <a class="el" href="AssignmentEngine_8cpp_source.html#l00201">201</a> of file <a class="el" href="AssignmentEngine_8cpp_source.html">AssignmentEngine.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="AssignmentEngine_8h_source.html#l00059">missingReviews</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="Menu_8cpp_source.html#l00114">Menu::generateAssignment()</a>, and <a class="el" href="main_8cpp_source.html#l00032">runBatchMode()</a>.</p>
-
 </div>
 </div>
 <a id="a46a1d0969f252a35e3fc5e4733fb28b4" name="a46a1d0969f252a35e3fc5e4733fb28b4"></a>
@@ -474,12 +421,6 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the required total flow. </p>
-
-<p class="definition">Definition at line <a class="el" href="AssignmentEngine_8cpp_source.html#l00185">185</a> of file <a class="el" href="AssignmentEngine_8cpp_source.html">AssignmentEngine.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="AssignmentEngine_8h_source.html#l00046">config</a>, <a class="el" href="Config_8h_source.html#l00039">Config::getMinReviewsPerSubmission()</a>, and <a class="el" href="AssignmentEngine_8h_source.html#l00044">submissions</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="RiskAnalyzer_8cpp_source.html#l00016">RiskAnalyzer::findCriticalReviewersForK1()</a>, <a class="el" href="Menu_8cpp_source.html#l00114">Menu::generateAssignment()</a>, <a class="el" href="AssignmentEngine_8cpp_source.html#l00193">hasValidAssignment()</a>, and <a class="el" href="main_8cpp_source.html#l00032">runBatchMode()</a>.</p>
 
 </div>
 </div>
@@ -507,10 +448,6 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AssignmentEngine_8cpp_source.html#l00096">96</a> of file <a class="el" href="AssignmentEngine_8cpp_source.html">AssignmentEngine.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="AssignmentEngine_8h_source.html#l00053">reviewerOffset</a>.</p>
-
 </div>
 </div>
 <a id="a3d6a495976de29d22ef654e9f02193e5" name="a3d6a495976de29d22ef654e9f02193e5"></a>
@@ -536,12 +473,6 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="AssignmentEngine_8cpp_source.html#l00088">88</a> of file <a class="el" href="AssignmentEngine_8cpp_source.html">AssignmentEngine.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="AssignmentEngine_8h_source.html#l00053">reviewerOffset</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="AssignmentEngine_8cpp_source.html#l00104">buildBaseGraph()</a>, and <a class="el" href="AssignmentEngine_8cpp_source.html#l00127">extractAssignments()</a>.</p>
 
 </div>
 </div>
@@ -569,12 +500,6 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AssignmentEngine_8cpp_source.html#l00100">100</a> of file <a class="el" href="AssignmentEngine_8cpp_source.html">AssignmentEngine.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="AssignmentEngine_8h_source.html#l00054">submissionOffset</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="AssignmentEngine_8cpp_source.html#l00127">extractAssignments()</a>.</p>
-
 </div>
 </div>
 <a id="a11f6f9c8e4189f69d5722b86a2e409c2" name="a11f6f9c8e4189f69d5722b86a2e409c2"></a>
@@ -601,12 +526,6 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AssignmentEngine_8cpp_source.html#l00092">92</a> of file <a class="el" href="AssignmentEngine_8cpp_source.html">AssignmentEngine.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="AssignmentEngine_8h_source.html#l00054">submissionOffset</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="AssignmentEngine_8cpp_source.html#l00104">buildBaseGraph()</a>, and <a class="el" href="AssignmentEngine_8cpp_source.html#l00148">calculateMissingReviews()</a>.</p>
-
 </div>
 </div>
 <a id="a68249e71925cf9c73d191fdb7395117c" name="a68249e71925cf9c73d191fdb7395117c"></a>
@@ -625,12 +544,6 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Checks if a valid assignment exists. </p>
-
-<p class="definition">Definition at line <a class="el" href="AssignmentEngine_8cpp_source.html#l00193">193</a> of file <a class="el" href="AssignmentEngine_8cpp_source.html">AssignmentEngine.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="AssignmentEngine_8cpp_source.html#l00185">getRequiredFlow()</a>, and <a class="el" href="AssignmentEngine_8h_source.html#l00056">lastComputedFlow</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="Menu_8cpp_source.html#l00114">Menu::generateAssignment()</a>, and <a class="el" href="main_8cpp_source.html#l00032">runBatchMode()</a>.</p>
 
 </div>
 </div>
@@ -658,13 +571,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Initializes the graph structure. </p>
-<p>\par Complexity: O(V) </p>
-
-<p class="definition">Definition at line <a class="el" href="AssignmentEngine_8cpp_source.html#l00022">22</a> of file <a class="el" href="AssignmentEngine_8cpp_source.html">AssignmentEngine.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="AssignmentEngine_8h_source.html#l00058">assignments</a>, <a class="el" href="AssignmentEngine_8h_source.html#l00048">graph</a>, <a class="el" href="AssignmentEngine_8h_source.html#l00056">lastComputedFlow</a>, <a class="el" href="AssignmentEngine_8h_source.html#l00059">missingReviews</a>, and <a class="el" href="AssignmentEngine_8h_source.html#l00055">totalNodes</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="AssignmentEngine_8cpp_source.html#l00176">solveBaseAssignment()</a>.</p>
+<p>@complexity O(V) </p>
 
 </div>
 </div>
@@ -704,13 +611,7 @@ Private Attributes</h2></td></tr>
 
 <p>Checks if a reviewer is compatible with a submission. </p>
 <p>Uses the GenerateAssignments mode from the config to determine which domains to consider for compatibility.</p>
-<p>\par Complexity: O(1) </p>
-
-<p class="definition">Definition at line <a class="el" href="AssignmentEngine_8cpp_source.html#l00029">29</a> of file <a class="el" href="AssignmentEngine_8cpp_source.html">AssignmentEngine.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="AssignmentEngine_8h_source.html#l00046">config</a>, <a class="el" href="Config_8h_source.html#l00051">Config::getGenerateAssignments()</a>, <a class="el" href="Reviewer_8h_source.html#l00063">Reviewer::getPrimaryExpertise()</a>, <a class="el" href="Submission_8h_source.html#l00071">Submission::getPrimaryTopic()</a>, <a class="el" href="Reviewer_8h_source.html#l00069">Reviewer::getSecondaryExpertise()</a>, and <a class="el" href="Submission_8h_source.html#l00077">Submission::getSecondaryTopic()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="AssignmentEngine_8cpp_source.html#l00104">buildBaseGraph()</a>.</p>
+<p>@complexity O(1) </p>
 
 </div>
 </div>
@@ -730,13 +631,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Solves the assignment problem using max-flow. </p>
-<p>\par Complexity: O(V * E^2) </p>
-
-<p class="definition">Definition at line <a class="el" href="AssignmentEngine_8cpp_source.html#l00176">176</a> of file <a class="el" href="AssignmentEngine_8cpp_source.html">AssignmentEngine.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="AssignmentEngine_8cpp_source.html#l00104">buildBaseGraph()</a>, <a class="el" href="AssignmentEngine_8cpp_source.html#l00148">calculateMissingReviews()</a>, <a class="el" href="MaxFlow_8cpp_source.html#l00051">MaxFlow::edmondsKarp()</a>, <a class="el" href="AssignmentEngine_8cpp_source.html#l00127">extractAssignments()</a>, <a class="el" href="AssignmentEngine_8h_source.html#l00048">graph</a>, <a class="el" href="AssignmentEngine_8cpp_source.html#l00022">initializeGraph()</a>, <a class="el" href="AssignmentEngine_8h_source.html#l00056">lastComputedFlow</a>, <a class="el" href="AssignmentEngine_8h_source.html#l00049">maxFlow</a>, <a class="el" href="AssignmentEngine_8h_source.html#l00052">sink</a>, and <a class="el" href="AssignmentEngine_8h_source.html#l00051">source</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="RiskAnalyzer_8cpp_source.html#l00016">RiskAnalyzer::findCriticalReviewersForK1()</a>, <a class="el" href="Menu_8cpp_source.html#l00114">Menu::generateAssignment()</a>, and <a class="el" href="main_8cpp_source.html#l00032">runBatchMode()</a>.</p>
+<p>@complexity O(V * E^2) </p>
 
 </div>
 </div>
@@ -761,10 +656,6 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AssignmentEngine_8h_source.html#l00058">58</a> of file <a class="el" href="AssignmentEngine_8h_source.html">AssignmentEngine.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="AssignmentEngine_8cpp_source.html#l00127">extractAssignments()</a>, <a class="el" href="AssignmentEngine_8cpp_source.html#l00197">getAssignments()</a>, and <a class="el" href="AssignmentEngine_8cpp_source.html#l00022">initializeGraph()</a>.</p>
-
 </div>
 </div>
 <a id="a5f58b86e3b3d4fe1d86180f186413456" name="a5f58b86e3b3d4fe1d86180f186413456"></a>
@@ -786,10 +677,6 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="AssignmentEngine_8h_source.html#l00046">46</a> of file <a class="el" href="AssignmentEngine_8h_source.html">AssignmentEngine.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="AssignmentEngine_8cpp_source.html#l00104">buildBaseGraph()</a>, <a class="el" href="AssignmentEngine_8cpp_source.html#l00148">calculateMissingReviews()</a>, <a class="el" href="AssignmentEngine_8cpp_source.html#l00057">getMatchTopic()</a>, <a class="el" href="AssignmentEngine_8cpp_source.html#l00185">getRequiredFlow()</a>, and <a class="el" href="AssignmentEngine_8cpp_source.html#l00029">isCompatible()</a>.</p>
 
 </div>
 </div>
@@ -813,10 +700,6 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AssignmentEngine_8h_source.html#l00048">48</a> of file <a class="el" href="AssignmentEngine_8h_source.html">AssignmentEngine.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="AssignmentEngine_8cpp_source.html#l00003">AssignmentEngine()</a>, <a class="el" href="AssignmentEngine_8cpp_source.html#l00104">buildBaseGraph()</a>, <a class="el" href="AssignmentEngine_8cpp_source.html#l00148">calculateMissingReviews()</a>, <a class="el" href="AssignmentEngine_8cpp_source.html#l00127">extractAssignments()</a>, <a class="el" href="AssignmentEngine_8cpp_source.html#l00022">initializeGraph()</a>, and <a class="el" href="AssignmentEngine_8cpp_source.html#l00176">solveBaseAssignment()</a>.</p>
-
 </div>
 </div>
 <a id="a522a5e22b0e31b51fcef091a11a31174" name="a522a5e22b0e31b51fcef091a11a31174"></a>
@@ -838,10 +721,6 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="AssignmentEngine_8h_source.html#l00056">56</a> of file <a class="el" href="AssignmentEngine_8h_source.html">AssignmentEngine.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="AssignmentEngine_8cpp_source.html#l00189">getLastComputedFlow()</a>, <a class="el" href="AssignmentEngine_8cpp_source.html#l00193">hasValidAssignment()</a>, <a class="el" href="AssignmentEngine_8cpp_source.html#l00022">initializeGraph()</a>, and <a class="el" href="AssignmentEngine_8cpp_source.html#l00176">solveBaseAssignment()</a>.</p>
 
 </div>
 </div>
@@ -865,10 +744,6 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AssignmentEngine_8h_source.html#l00049">49</a> of file <a class="el" href="AssignmentEngine_8h_source.html">AssignmentEngine.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="AssignmentEngine_8cpp_source.html#l00176">solveBaseAssignment()</a>.</p>
-
 </div>
 </div>
 <a id="a2a7f03b2adc6f50d1618a529a697cd2b" name="a2a7f03b2adc6f50d1618a529a697cd2b"></a>
@@ -890,10 +765,6 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="AssignmentEngine_8h_source.html#l00059">59</a> of file <a class="el" href="AssignmentEngine_8h_source.html">AssignmentEngine.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="AssignmentEngine_8cpp_source.html#l00148">calculateMissingReviews()</a>, <a class="el" href="AssignmentEngine_8cpp_source.html#l00201">getMissingReviews()</a>, and <a class="el" href="AssignmentEngine_8cpp_source.html#l00022">initializeGraph()</a>.</p>
 
 </div>
 </div>
@@ -917,10 +788,6 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AssignmentEngine_8h_source.html#l00053">53</a> of file <a class="el" href="AssignmentEngine_8h_source.html">AssignmentEngine.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="AssignmentEngine_8cpp_source.html#l00096">getReviewerIndexFromNode()</a>, and <a class="el" href="AssignmentEngine_8cpp_source.html#l00088">getReviewerNode()</a>.</p>
-
 </div>
 </div>
 <a id="af43a11e3785dcf74cd12dde41cb46271" name="af43a11e3785dcf74cd12dde41cb46271"></a>
@@ -942,10 +809,6 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="AssignmentEngine_8h_source.html#l00045">45</a> of file <a class="el" href="AssignmentEngine_8h_source.html">AssignmentEngine.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="AssignmentEngine_8cpp_source.html#l00104">buildBaseGraph()</a>, and <a class="el" href="AssignmentEngine_8cpp_source.html#l00127">extractAssignments()</a>.</p>
 
 </div>
 </div>
@@ -969,10 +832,6 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AssignmentEngine_8h_source.html#l00052">52</a> of file <a class="el" href="AssignmentEngine_8h_source.html">AssignmentEngine.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="AssignmentEngine_8cpp_source.html#l00003">AssignmentEngine()</a>, <a class="el" href="AssignmentEngine_8cpp_source.html#l00104">buildBaseGraph()</a>, <a class="el" href="AssignmentEngine_8cpp_source.html#l00148">calculateMissingReviews()</a>, <a class="el" href="AssignmentEngine_8cpp_source.html#l00127">extractAssignments()</a>, and <a class="el" href="AssignmentEngine_8cpp_source.html#l00176">solveBaseAssignment()</a>.</p>
-
 </div>
 </div>
 <a id="af55c22038bf0b207c70c063864572fb7" name="af55c22038bf0b207c70c063864572fb7"></a>
@@ -994,10 +853,6 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="AssignmentEngine_8h_source.html#l00051">51</a> of file <a class="el" href="AssignmentEngine_8h_source.html">AssignmentEngine.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="AssignmentEngine_8cpp_source.html#l00104">buildBaseGraph()</a>, and <a class="el" href="AssignmentEngine_8cpp_source.html#l00176">solveBaseAssignment()</a>.</p>
 
 </div>
 </div>
@@ -1021,10 +876,6 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AssignmentEngine_8h_source.html#l00054">54</a> of file <a class="el" href="AssignmentEngine_8h_source.html">AssignmentEngine.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="AssignmentEngine_8cpp_source.html#l00003">AssignmentEngine()</a>, <a class="el" href="AssignmentEngine_8cpp_source.html#l00127">extractAssignments()</a>, <a class="el" href="AssignmentEngine_8cpp_source.html#l00100">getSubmissionIndexFromNode()</a>, and <a class="el" href="AssignmentEngine_8cpp_source.html#l00092">getSubmissionNode()</a>.</p>
-
 </div>
 </div>
 <a id="abd7cc59cef40650495ec5aa7646bb2f5" name="abd7cc59cef40650495ec5aa7646bb2f5"></a>
@@ -1046,10 +897,6 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="AssignmentEngine_8h_source.html#l00044">44</a> of file <a class="el" href="AssignmentEngine_8h_source.html">AssignmentEngine.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="AssignmentEngine_8cpp_source.html#l00003">AssignmentEngine()</a>, <a class="el" href="AssignmentEngine_8cpp_source.html#l00104">buildBaseGraph()</a>, <a class="el" href="AssignmentEngine_8cpp_source.html#l00148">calculateMissingReviews()</a>, <a class="el" href="AssignmentEngine_8cpp_source.html#l00127">extractAssignments()</a>, and <a class="el" href="AssignmentEngine_8cpp_source.html#l00185">getRequiredFlow()</a>.</p>
 
 </div>
 </div>
@@ -1073,24 +920,16 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AssignmentEngine_8h_source.html#l00055">55</a> of file <a class="el" href="AssignmentEngine_8h_source.html">AssignmentEngine.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="AssignmentEngine_8cpp_source.html#l00003">AssignmentEngine()</a>, and <a class="el" href="AssignmentEngine_8cpp_source.html#l00022">initializeGraph()</a>.</p>
-
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="AssignmentEngine_8h_source.html">AssignmentEngine.h</a></li>
-<li><a class="el" href="AssignmentEngine_8cpp_source.html">AssignmentEngine.cpp</a></li>
+<li>include/core/<a class="el" href="AssignmentEngine_8h_source.html">AssignmentEngine.h</a></li>
+<li>src/core/<a class="el" href="AssignmentEngine_8cpp.html">AssignmentEngine.cpp</a></li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="classAssignmentEngine.html">AssignmentEngine</a></li>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
 </body>
 </html>

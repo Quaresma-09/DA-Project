@@ -1,0 +1,5 @@
+<map id="CsvParser" name="CsvParser">
+<area shape="rect" id="Node000001" title="Handles the extraction of data from a formatted CSV file." alt="" coords="5,93,92,119"/>
+<area shape="rect" id="Node000002" href="$classConfig.html" title="Manages global configuration settings for the conference assignment system." alt="" coords="17,5,80,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="51,45,51,93,46,93,46,45"/>
+</map>

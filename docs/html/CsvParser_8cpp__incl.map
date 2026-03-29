@@ -1,0 +1,31 @@
+<map id="src/parser/CsvParser.cpp" name="src/parser/CsvParser.cpp">
+<area shape="rect" id="Node000001" title="Implementation of the CsvParser class logic." alt="" coords="476,5,656,31"/>
+<area shape="rect" id="Node000002" href="$CsvParser_8h.html" title="Header file for the CsvParser class." alt="" coords="262,79,404,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="530,33,384,77,383,72,528,28"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="428,79,502,104"/>
+<area shape="poly" id="edge13_Node000001_Node000010" title=" " alt="" coords="552,33,494,73,491,68,548,28"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="526,79,606,104"/>
+<area shape="poly" id="edge14_Node000001_Node000011" title=" " alt="" coords="569,31,569,65,564,65,564,31"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="630,79,705,104"/>
+<area shape="poly" id="edge15_Node000001_Node000012" title=" " alt="" coords="584,28,641,68,638,73,581,33"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="729,79,814,104"/>
+<area shape="poly" id="edge16_Node000001_Node000013" title=" " alt="" coords="600,28,726,72,725,77,598,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="157,225,216,251"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="262,98,192,104,118,115,55,131,32,141,16,154,9,169,12,182,23,193,42,203,92,219,144,229,143,234,91,224,40,208,20,197,7,184,3,168,12,150,29,137,53,126,117,109,191,99,261,93"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="512,152,575,177"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="368,101,500,146,499,151,366,107"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="600,152,714,177"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="386,101,592,146,591,152,384,107"/>
+<area shape="rect" id="Node000006" href="$Submission_8h.html" title="Header file for the Submission class." alt="" coords="170,152,325,177"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="321,106,274,145,270,141,318,102"/>
+<area shape="rect" id="Node000008" href="$Reviewer_8h.html" title="Header file for the Reviewer class." alt="" coords="349,152,488,177"/>
+<area shape="poly" id="edge8_Node000002_Node000008" title=" " alt="" coords="348,102,396,141,392,145,345,106"/>
+<area shape="rect" id="Node000009" href="$Config_8h.html" title="Header file for the Config class." alt="" coords="26,152,146,177"/>
+<area shape="poly" id="edge11_Node000002_Node000009" title=" " alt="" coords="294,107,140,151,139,146,293,101"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="240,179,207,217,203,213,235,176"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="279,225,339,251"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="260,176,292,213,288,217,256,179"/>
+<area shape="poly" id="edge9_Node000008_Node000003" title=" " alt="" coords="382,180,230,226,228,221,380,175"/>
+<area shape="poly" id="edge10_Node000008_Node000007" title=" " alt="" coords="402,180,340,220,337,215,399,175"/>
+<area shape="poly" id="edge12_Node000009_Node000003" title=" " alt="" coords="104,175,160,215,157,219,101,180"/>
+</map>

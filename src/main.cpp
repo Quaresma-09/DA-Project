@@ -29,7 +29,7 @@
  *
  * @complexity O(V * E^2) for the max-flow computation.
  */
-int runBatchMode(const std::string& inputFile, const std::string& outputFile) {
+int runBatchMode(const std::string& inputFile, const std::string& riskFile) {
     CsvParser parser(inputFile);
 
     if (!parser.parse()) {
@@ -59,7 +59,7 @@ int runBatchMode(const std::string& inputFile, const std::string& outputFile) {
 
     // Write assignment output (only if GenerateAssignments != 0)
     if (config.getGenerateAssignments() != 0) {
-        OutputWriter::writeAssignments(outputFile, engine.getAssignments(), engine.getMissingReviews());
+        OutputWriter::writeAssignments(config.getOutputFileName(), engine.getAssignments(), engine.getMissingReviews());
     } else {
         std::cout << "GenerateAssignments = 0: assignment computed but not reported." << std::endl;
     }
@@ -83,23 +83,19 @@ int runBatchMode(const std::string& inputFile, const std::string& outputFile) {
             std::cout << "Found " << critical.size() << " critical reviewer(s)." << std::endl;
         }
 
-        // Append risk analysis to the output file (or write new if mode 0)
-        if (config.getGenerateAssignments() != 0) {
-            OutputWriter::appendRiskAnalysis(outputFile, critical, riskLevel);
-        } else {
-            OutputWriter::writeRiskAnalysis(outputFile, critical, riskLevel);
-        }
+        // Write risk analysis to the CLI-specified risk file
+        OutputWriter::writeRiskAnalysis(riskFile, critical, riskLevel);
     }
 
     return 0;
 }
 
 int main(int argc, char* argv[]) {
-    // Batch mode: myProg -b input.csv output.csv
+    // Batch mode: myProg -b input.csv risk.csv
     if (argc >= 4 && std::string(argv[1]) == "-b") {
         std::string inputFile = argv[2];
-        std::string outputFile = argv[3];
-        return runBatchMode(inputFile, outputFile);
+        std::string riskFile = argv[3];
+        return runBatchMode(inputFile, riskFile);
     }
 
     // Interactive mode

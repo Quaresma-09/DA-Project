@@ -5,14 +5,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Conference Assignment System: CsvParser Class Reference</title>
+<title>Conference Assignment Tool: CsvParser Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -25,9 +21,8 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Conference Assignment System<span id="projectnumber">&#160;DA 2026 - Project 1</span>
+   <div id="projectname">Conference Assignment Tool
    </div>
-   <div id="projectbrief">Reviewer-Submission Assignment Tool using Max-Flow</div>
   </td>
  </tr>
  </tbody>
@@ -51,23 +46,6 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('classCsvParser.html',''); initResizable(); });
-/* @license-end */
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -89,6 +67,7 @@ $(document).ready(function(){initNavTree('classCsvParser.html',''); initResizabl
 </div>
 </div>
 
+</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -103,65 +82,73 @@ $(document).ready(function(){initNavTree('classCsvParser.html',''); initResizabl
  <a href="classCsvParser.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="CsvParser_8h_source.html">CsvParser.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for CsvParser:</div>
+<div class="dyncontent">
+<div class="center"><img src="classCsvParser__coll__graph.png" border="0" usemap="#aCsvParser_coll__map" alt="Collaboration graph"/></div>
+<map name="aCsvParser_coll__map" id="aCsvParser_coll__map">
+<area shape="rect" title="Handles the extraction of data from a formatted CSV file." alt="" coords="5,93,92,119"/>
+<area shape="rect" href="classConfig.html" title="Manages global configuration settings for the conference assignment system." alt="" coords="17,5,80,31"/>
+<area shape="poly" title=" " alt="" coords="51,45,51,93,46,93,46,45"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a2a1e01b70f1a7d540972b2ede8ab33ca" id="r_a2a1e01b70f1a7d540972b2ede8ab33ca"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCsvParser.html#a2a1e01b70f1a7d540972b2ede8ab33ca">CsvParser</a> (std::string <a class="el" href="classCsvParser.html#ac557adcc5455fddd0c7229402f818a67">filename</a>)</td></tr>
-<tr class="memdesc:a2a1e01b70f1a7d540972b2ede8ab33ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for the CsvParser.  <br /></td></tr>
+<tr class="memdesc:a2a1e01b70f1a7d540972b2ede8ab33ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for the <a class="el" href="classCsvParser.html" title="Handles the extraction of data from a formatted CSV file.">CsvParser</a>.  <br /></td></tr>
 <tr class="separator:a2a1e01b70f1a7d540972b2ede8ab33ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e6ff131e932e0e6933c60637f87e494" id="r_a4e6ff131e932e0e6933c60637f87e494"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classConfig.html">Config</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCsvParser.html#a4e6ff131e932e0e6933c60637f87e494">getConfig</a> () const</td></tr>
-<tr class="memdesc:a4e6ff131e932e0e6933c60637f87e494"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides access to the global configuration parameters.  <br /></td></tr>
-<tr class="separator:a4e6ff131e932e0e6933c60637f87e494"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4569673957c3d5e3bae2d12b09a049c5" id="r_a4569673957c3d5e3bae2d12b09a049c5"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="classReviewer.html">Reviewer</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCsvParser.html#a4569673957c3d5e3bae2d12b09a049c5">getReviewers</a> () const</td></tr>
-<tr class="memdesc:a4569673957c3d5e3bae2d12b09a049c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides access to the list of parsed reviewers.  <br /></td></tr>
-<tr class="separator:a4569673957c3d5e3bae2d12b09a049c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa36d732af698e7fb8706df9cbabce8cd" id="r_aa36d732af698e7fb8706df9cbabce8cd"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="classSubmission.html">Submission</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCsvParser.html#aa36d732af698e7fb8706df9cbabce8cd">getSubmissions</a> () const</td></tr>
-<tr class="memdesc:aa36d732af698e7fb8706df9cbabce8cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides access to the list of parsed submissions.  <br /></td></tr>
-<tr class="separator:aa36d732af698e7fb8706df9cbabce8cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ab941080adc9755f79c0a8f8f4b0962" id="r_a1ab941080adc9755f79c0a8f8f4b0962"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCsvParser.html#a1ab941080adc9755f79c0a8f8f4b0962">parse</a> ()</td></tr>
 <tr class="memdesc:a1ab941080adc9755f79c0a8f8f4b0962"><td class="mdescLeft">&#160;</td><td class="mdescRight">Orchestrates the parsing process of the CSV file.  <br /></td></tr>
 <tr class="separator:a1ab941080adc9755f79c0a8f8f4b0962"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa36d732af698e7fb8706df9cbabce8cd" id="r_aa36d732af698e7fb8706df9cbabce8cd"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="classSubmission.html">Submission</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCsvParser.html#aa36d732af698e7fb8706df9cbabce8cd">getSubmissions</a> () const</td></tr>
+<tr class="memdesc:aa36d732af698e7fb8706df9cbabce8cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides access to the list of parsed submissions.  <br /></td></tr>
+<tr class="separator:aa36d732af698e7fb8706df9cbabce8cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4569673957c3d5e3bae2d12b09a049c5" id="r_a4569673957c3d5e3bae2d12b09a049c5"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="classReviewer.html">Reviewer</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCsvParser.html#a4569673957c3d5e3bae2d12b09a049c5">getReviewers</a> () const</td></tr>
+<tr class="memdesc:a4569673957c3d5e3bae2d12b09a049c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides access to the list of parsed reviewers.  <br /></td></tr>
+<tr class="separator:a4569673957c3d5e3bae2d12b09a049c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e6ff131e932e0e6933c60637f87e494" id="r_a4e6ff131e932e0e6933c60637f87e494"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classConfig.html">Config</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCsvParser.html#a4e6ff131e932e0e6933c60637f87e494">getConfig</a> () const</td></tr>
+<tr class="memdesc:a4e6ff131e932e0e6933c60637f87e494"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides access to the global configuration parameters.  <br /></td></tr>
+<tr class="separator:a4e6ff131e932e0e6933c60637f87e494"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:adf4c49074e9196b015bf61eed22ab574" id="r_adf4c49074e9196b015bf61eed22ab574"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCsvParser.html#adf4c49074e9196b015bf61eed22ab574">removeComments</a> (const std::string &amp;line)</td></tr>
-<tr class="memdesc:adf4c49074e9196b015bf61eed22ab574"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes comments starting with '#' from a line.  <br /></td></tr>
-<tr class="separator:adf4c49074e9196b015bf61eed22ab574"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02070cd84518d90229db6058210dbe18" id="r_a02070cd84518d90229db6058210dbe18"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCsvParser.html#a02070cd84518d90229db6058210dbe18">splitCsvLine</a> (const std::string &amp;line)</td></tr>
-<tr class="memdesc:a02070cd84518d90229db6058210dbe18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Splits a CSV line into tokens based on the ';' delimiter.  <br /></td></tr>
-<tr class="separator:a02070cd84518d90229db6058210dbe18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7be3a90cca2d0c2932c30e8a10ee5d77" id="r_a7be3a90cca2d0c2932c30e8a10ee5d77"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCsvParser.html#a7be3a90cca2d0c2932c30e8a10ee5d77">trim</a> (const std::string &amp;str)</td></tr>
 <tr class="memdesc:a7be3a90cca2d0c2932c30e8a10ee5d77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes leading and trailing whitespace from a string.  <br /></td></tr>
 <tr class="separator:a7be3a90cca2d0c2932c30e8a10ee5d77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02070cd84518d90229db6058210dbe18" id="r_a02070cd84518d90229db6058210dbe18"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCsvParser.html#a02070cd84518d90229db6058210dbe18">splitCsvLine</a> (const std::string &amp;line)</td></tr>
+<tr class="memdesc:a02070cd84518d90229db6058210dbe18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Splits a CSV line into tokens based on the ',' delimiter.  <br /></td></tr>
+<tr class="separator:a02070cd84518d90229db6058210dbe18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf4c49074e9196b015bf61eed22ab574" id="r_adf4c49074e9196b015bf61eed22ab574"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCsvParser.html#adf4c49074e9196b015bf61eed22ab574">removeComments</a> (const std::string &amp;line)</td></tr>
+<tr class="memdesc:adf4c49074e9196b015bf61eed22ab574"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes comments starting with '#' from a line.  <br /></td></tr>
+<tr class="separator:adf4c49074e9196b015bf61eed22ab574"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a7ca55d6e9d9005a518815967a83ab15b" id="r_a7ca55d6e9d9005a518815967a83ab15b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classConfig.html">Config</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCsvParser.html#a7ca55d6e9d9005a518815967a83ab15b">config</a></td></tr>
-<tr class="memdesc:a7ca55d6e9d9005a518815967a83ab15b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configuration parameters parsed from the file.  <br /></td></tr>
-<tr class="separator:a7ca55d6e9d9005a518815967a83ab15b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac557adcc5455fddd0c7229402f818a67" id="r_ac557adcc5455fddd0c7229402f818a67"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCsvParser.html#ac557adcc5455fddd0c7229402f818a67">filename</a></td></tr>
 <tr class="memdesc:ac557adcc5455fddd0c7229402f818a67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Path to the input CSV file.  <br /></td></tr>
 <tr class="separator:ac557adcc5455fddd0c7229402f818a67"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6cfbcb27be54b3bf667075d6737823d5" id="r_a6cfbcb27be54b3bf667075d6737823d5"><td class="memItemLeft" align="right" valign="top">std::unordered_set&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCsvParser.html#a6cfbcb27be54b3bf667075d6737823d5">reviewerIds</a></td></tr>
-<tr class="memdesc:a6cfbcb27be54b3bf667075d6737823d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper set to ensure reviewer IDs are unique.  <br /></td></tr>
-<tr class="separator:a6cfbcb27be54b3bf667075d6737823d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e38d78d87ee7d9a7a9ff4c08a1033d3" id="r_a1e38d78d87ee7d9a7a9ff4c08a1033d3"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classReviewer.html">Reviewer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCsvParser.html#a1e38d78d87ee7d9a7a9ff4c08a1033d3">reviewers</a></td></tr>
-<tr class="memdesc:a1e38d78d87ee7d9a7a9ff4c08a1033d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collection of parsed reviewers.  <br /></td></tr>
-<tr class="separator:a1e38d78d87ee7d9a7a9ff4c08a1033d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2aae5c4867fa7e08c8ac7d3e4d2bd18" id="r_ae2aae5c4867fa7e08c8ac7d3e4d2bd18"><td class="memItemLeft" align="right" valign="top">std::unordered_set&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCsvParser.html#ae2aae5c4867fa7e08c8ac7d3e4d2bd18">submissionIds</a></td></tr>
-<tr class="memdesc:ae2aae5c4867fa7e08c8ac7d3e4d2bd18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper set to ensure submission IDs are unique.  <br /></td></tr>
-<tr class="separator:ae2aae5c4867fa7e08c8ac7d3e4d2bd18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad06cbc3c5ca8a3863b6fec1a24bc3a1e" id="r_ad06cbc3c5ca8a3863b6fec1a24bc3a1e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classSubmission.html">Submission</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCsvParser.html#ad06cbc3c5ca8a3863b6fec1a24bc3a1e">submissions</a></td></tr>
 <tr class="memdesc:ad06cbc3c5ca8a3863b6fec1a24bc3a1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collection of parsed submissions.  <br /></td></tr>
 <tr class="separator:ad06cbc3c5ca8a3863b6fec1a24bc3a1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e38d78d87ee7d9a7a9ff4c08a1033d3" id="r_a1e38d78d87ee7d9a7a9ff4c08a1033d3"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classReviewer.html">Reviewer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCsvParser.html#a1e38d78d87ee7d9a7a9ff4c08a1033d3">reviewers</a></td></tr>
+<tr class="memdesc:a1e38d78d87ee7d9a7a9ff4c08a1033d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collection of parsed reviewers.  <br /></td></tr>
+<tr class="separator:a1e38d78d87ee7d9a7a9ff4c08a1033d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ca55d6e9d9005a518815967a83ab15b" id="r_a7ca55d6e9d9005a518815967a83ab15b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classConfig.html">Config</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCsvParser.html#a7ca55d6e9d9005a518815967a83ab15b">config</a></td></tr>
+<tr class="memdesc:a7ca55d6e9d9005a518815967a83ab15b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configuration parameters parsed from the file.  <br /></td></tr>
+<tr class="separator:a7ca55d6e9d9005a518815967a83ab15b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2aae5c4867fa7e08c8ac7d3e4d2bd18" id="r_ae2aae5c4867fa7e08c8ac7d3e4d2bd18"><td class="memItemLeft" align="right" valign="top">std::unordered_set&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCsvParser.html#ae2aae5c4867fa7e08c8ac7d3e4d2bd18">submissionIds</a></td></tr>
+<tr class="memdesc:ae2aae5c4867fa7e08c8ac7d3e4d2bd18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper set to ensure submission IDs are unique.  <br /></td></tr>
+<tr class="separator:ae2aae5c4867fa7e08c8ac7d3e4d2bd18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cfbcb27be54b3bf667075d6737823d5" id="r_a6cfbcb27be54b3bf667075d6737823d5"><td class="memItemLeft" align="right" valign="top">std::unordered_set&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCsvParser.html#a6cfbcb27be54b3bf667075d6737823d5">reviewerIds</a></td></tr>
+<tr class="memdesc:a6cfbcb27be54b3bf667075d6737823d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper set to ensure reviewer IDs are unique.  <br /></td></tr>
+<tr class="separator:a6cfbcb27be54b3bf667075d6737823d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Handles the extraction of data from a formatted CSV file. </p>
 <ul>
-<li>The class processes four main sections: Submissions, Reviewers, Parameters, and Control. It ensures data integrity by checking for duplicate IDs and ignoring comments or empty lines. </li>
+<li>The class processes four main sections: #Submissions, #Reviewers, #Parameters, and #Control. It ensures data integrity by checking for duplicate IDs and ignoring comments or empty lines. </li>
 </ul>
-
-<p class="definition">Definition at line <a class="el" href="CsvParser_8h_source.html#l00024">24</a> of file <a class="el" href="CsvParser_8h_source.html">CsvParser.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a2a1e01b70f1a7d540972b2ede8ab33ca" name="a2a1e01b70f1a7d540972b2ede8ab33ca"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2a1e01b70f1a7d540972b2ede8ab33ca">&#9670;&#160;</a></span>CsvParser()</h2>
@@ -187,15 +174,13 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Constructor for the CsvParser. </p>
+<p>Constructor for the <a class="el" href="classCsvParser.html" title="Handles the extraction of data from a formatted CSV file.">CsvParser</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">filename</td><td>The path to the CSV file to be processed. </td></tr>
   </table>
   </dd>
 </dl>
-
-<p class="definition">Definition at line <a class="el" href="CsvParser_8cpp_source.html#l00012">12</a> of file <a class="el" href="CsvParser_8cpp_source.html">CsvParser.cpp</a>.</p>
 
 </div>
 </div>
@@ -224,13 +209,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Provides access to the global configuration parameters. </p>
-<dl class="section return"><dt>Returns</dt><dd>A constant reference to the Config object. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="CsvParser_8h_source.html#l00087">87</a> of file <a class="el" href="CsvParser_8h_source.html">CsvParser.h</a>.</p>
-
-<p class="reference">References <a class="el" href="CsvParser_8h_source.html#l00029">config</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="Menu_8cpp_source.html#l00114">Menu::generateAssignment()</a>, <a class="el" href="main_8cpp_source.html#l00032">runBatchMode()</a>, <a class="el" href="Menu_8cpp_source.html#l00168">Menu::runRiskAnalysis()</a>, and <a class="el" href="Menu_8cpp_source.html#l00098">Menu::showParameters()</a>.</p>
+<dl class="section return"><dt>Returns</dt><dd>A constant reference to the <a class="el" href="classConfig.html" title="Manages global configuration settings for the conference assignment system.">Config</a> object. </dd></dl>
 
 </div>
 </div>
@@ -258,13 +237,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Provides access to the list of parsed reviewers. </p>
-<dl class="section return"><dt>Returns</dt><dd>A constant reference to a vector of Reviewer objects. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="CsvParser_8h_source.html#l00081">81</a> of file <a class="el" href="CsvParser_8h_source.html">CsvParser.h</a>.</p>
-
-<p class="reference">References <a class="el" href="CsvParser_8h_source.html#l00028">reviewers</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="Menu_8cpp_source.html#l00114">Menu::generateAssignment()</a>, <a class="el" href="Menu_8cpp_source.html#l00079">Menu::listReviewers()</a>, <a class="el" href="Menu_8cpp_source.html#l00032">Menu::loadFile()</a>, <a class="el" href="main_8cpp_source.html#l00032">runBatchMode()</a>, and <a class="el" href="Menu_8cpp_source.html#l00168">Menu::runRiskAnalysis()</a>.</p>
+<dl class="section return"><dt>Returns</dt><dd>A constant reference to a vector of <a class="el" href="classReviewer.html" title="Represents a reviewer in the conference assignment system.">Reviewer</a> objects. </dd></dl>
 
 </div>
 </div>
@@ -292,13 +265,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Provides access to the list of parsed submissions. </p>
-<dl class="section return"><dt>Returns</dt><dd>A constant reference to a vector of Submission objects. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="CsvParser_8h_source.html#l00075">75</a> of file <a class="el" href="CsvParser_8h_source.html">CsvParser.h</a>.</p>
-
-<p class="reference">References <a class="el" href="CsvParser_8h_source.html#l00027">submissions</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="Menu_8cpp_source.html#l00114">Menu::generateAssignment()</a>, <a class="el" href="Menu_8cpp_source.html#l00059">Menu::listSubmissions()</a>, <a class="el" href="Menu_8cpp_source.html#l00032">Menu::loadFile()</a>, <a class="el" href="main_8cpp_source.html#l00032">runBatchMode()</a>, and <a class="el" href="Menu_8cpp_source.html#l00168">Menu::runRiskAnalysis()</a>.</p>
+<dl class="section return"><dt>Returns</dt><dd>A constant reference to a vector of <a class="el" href="classSubmission.html" title="Represents a paper submitted to the conference.">Submission</a> objects. </dd></dl>
 
 </div>
 </div>
@@ -320,18 +287,12 @@ Private Attributes</h2></td></tr>
 <p>Orchestrates the parsing process of the CSV file. </p>
 <p>Main parsing loop using a State Machine approach.</p>
 <ul>
-<li>Reads the file line by line, identifies sections, and populates the corresponding data structures (Submissions, Reviewers, Config).</li>
+<li>Reads the file line by line, identifies sections, and populates the corresponding data structures (Submissions, Reviewers, <a class="el" href="classConfig.html" title="Manages global configuration settings for the conference assignment system.">Config</a>).</li>
 <li><dl class="section return"><dt>Returns</dt><dd>true if the file was parsed successfully without critical errors, false if the file could not be opened or has severe formatting issues.</dd></dl>
-The method identifies headers (e.g., Submissions) to switch states and determines how to process subsequent lines based on the current state. Includes error handling for duplicated IDs, malformed integers, and validation of mandatory parameters.</li>
+The method identifies headers (e.g., #Submissions) to switch states and determines how to process subsequent lines based on the current state. Includes error handling for duplicated IDs, malformed integers, and validation of mandatory parameters.</li>
 </ul>
-<dl class="section return"><dt>Returns</dt><dd>true if the file was parsed successfully, false otherwise. \par Complexity: O(N) where N is the number of lines in the file. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the file was parsed successfully, false otherwise. @complexity O(N) where N is the number of lines in the file. </dd></dl>
 <p>Internal states to track which section of the CSV is being read.</p>
-
-<p class="definition">Definition at line <a class="el" href="CsvParser_8cpp_source.html#l00073">73</a> of file <a class="el" href="CsvParser_8cpp_source.html">CsvParser.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="CsvParser_8h_source.html#l00029">config</a>, <a class="el" href="CsvParser_8h_source.html#l00026">filename</a>, <a class="el" href="CsvParser_8cpp_source.html#l00030">removeComments()</a>, <a class="el" href="CsvParser_8h_source.html#l00032">reviewerIds</a>, <a class="el" href="CsvParser_8h_source.html#l00028">reviewers</a>, <a class="el" href="Config_8h_source.html#l00081">Config::setGenerateAssignments()</a>, <a class="el" href="Config_8h_source.html#l00075">Config::setMaxReviewsPerReviewer()</a>, <a class="el" href="Config_8h_source.html#l00069">Config::setMinReviewsPerSubmission()</a>, <a class="el" href="Config_8h_source.html#l00093">Config::setOutputFileName()</a>, <a class="el" href="Config_8h_source.html#l00087">Config::setRiskAnalysis()</a>, <a class="el" href="CsvParser_8cpp_source.html#l00043">splitCsvLine()</a>, <a class="el" href="CsvParser_8h_source.html#l00031">submissionIds</a>, <a class="el" href="CsvParser_8h_source.html#l00027">submissions</a>, and <a class="el" href="CsvParser_8cpp_source.html#l00018">trim()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="Menu_8cpp_source.html#l00032">Menu::loadFile()</a>, and <a class="el" href="main_8cpp_source.html#l00032">runBatchMode()</a>.</p>
 
 </div>
 </div>
@@ -360,19 +321,14 @@ The method identifies headers (e.g., Submissions) to switch states and determine
 </div><div class="memdoc">
 
 <p>Removes comments starting with '#' from a line. </p>
-<p>Strips comments from the input line.</p>
+<p>Strips comments from the input line. This allows the parser to ignore everything after the '#' character within data lines.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">line</td><td>The raw line to be cleaned. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The line content before the '#' character.</dd></dl>
-<p>This allows the parser to ignore everything after the '#' character within data lines. </p>
-
-<p class="definition">Definition at line <a class="el" href="CsvParser_8cpp_source.html#l00030">30</a> of file <a class="el" href="CsvParser_8cpp_source.html">CsvParser.cpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="CsvParser_8cpp_source.html#l00073">parse()</a>.</p>
+<dl class="section return"><dt>Returns</dt><dd>The line content before the '#' character. </dd></dl>
 
 </div>
 </div>
@@ -400,22 +356,15 @@ The method identifies headers (e.g., Submissions) to switch states and determine
 </table>
 </div><div class="memdoc">
 
-<p>Splits a CSV line into tokens based on the ';' delimiter. </p>
-<p>Custom CSV splitter that handles quoted fields.</p>
+<p>Splits a CSV line into tokens based on the ',' delimiter. </p>
+<p>Custom CSV splitter that handles quoted fields. Iterates through the line character by character to ensure commas inside quotes don't break the tokenization.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">line</td><td>The raw line from the CSV file. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A vector of strings containing the individual columns.</dd></dl>
-<p>Iterates through the line character by character to ensure commas inside quotes don't break the tokenization. </p>
-
-<p class="definition">Definition at line <a class="el" href="CsvParser_8cpp_source.html#l00043">43</a> of file <a class="el" href="CsvParser_8cpp_source.html">CsvParser.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="CsvParser_8cpp_source.html#l00018">trim()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="CsvParser_8cpp_source.html#l00073">parse()</a>.</p>
+<dl class="section return"><dt>Returns</dt><dd>A vector of strings containing the individual columns. </dd></dl>
 
 </div>
 </div>
@@ -444,19 +393,14 @@ The method identifies headers (e.g., Submissions) to switch states and determine
 </div><div class="memdoc">
 
 <p>Removes leading and trailing whitespace from a string. </p>
-<p>Cleans strings by removing whitespace and quotes.</p>
+<p>Cleans strings by removing whitespace and quotes. Useful for handling CSV fields that might have inconsistent spacing.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">str</td><td>The string to be trimmed. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A new string without surrounding whitespace.</dd></dl>
-<p>Useful for handling CSV fields that might have inconsistent spacing. </p>
-
-<p class="definition">Definition at line <a class="el" href="CsvParser_8cpp_source.html#l00018">18</a> of file <a class="el" href="CsvParser_8cpp_source.html">CsvParser.cpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="CsvParser_8cpp_source.html#l00073">parse()</a>, and <a class="el" href="CsvParser_8cpp_source.html#l00043">splitCsvLine()</a>.</p>
+<dl class="section return"><dt>Returns</dt><dd>A new string without surrounding whitespace. </dd></dl>
 
 </div>
 </div>
@@ -483,10 +427,6 @@ The method identifies headers (e.g., Submissions) to switch states and determine
 
 <p>Configuration parameters parsed from the file. </p>
 
-<p class="definition">Definition at line <a class="el" href="CsvParser_8h_source.html#l00029">29</a> of file <a class="el" href="CsvParser_8h_source.html">CsvParser.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="CsvParser_8h_source.html#l00087">getConfig()</a>, and <a class="el" href="CsvParser_8cpp_source.html#l00073">parse()</a>.</p>
-
 </div>
 </div>
 <a id="ac557adcc5455fddd0c7229402f818a67" name="ac557adcc5455fddd0c7229402f818a67"></a>
@@ -510,10 +450,6 @@ The method identifies headers (e.g., Submissions) to switch states and determine
 </div><div class="memdoc">
 
 <p>Path to the input CSV file. </p>
-
-<p class="definition">Definition at line <a class="el" href="CsvParser_8h_source.html#l00026">26</a> of file <a class="el" href="CsvParser_8h_source.html">CsvParser.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="CsvParser_8cpp_source.html#l00073">parse()</a>.</p>
 
 </div>
 </div>
@@ -539,10 +475,6 @@ The method identifies headers (e.g., Submissions) to switch states and determine
 
 <p>Helper set to ensure reviewer IDs are unique. </p>
 
-<p class="definition">Definition at line <a class="el" href="CsvParser_8h_source.html#l00032">32</a> of file <a class="el" href="CsvParser_8h_source.html">CsvParser.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="CsvParser_8cpp_source.html#l00073">parse()</a>.</p>
-
 </div>
 </div>
 <a id="a1e38d78d87ee7d9a7a9ff4c08a1033d3" name="a1e38d78d87ee7d9a7a9ff4c08a1033d3"></a>
@@ -566,10 +498,6 @@ The method identifies headers (e.g., Submissions) to switch states and determine
 </div><div class="memdoc">
 
 <p>Collection of parsed reviewers. </p>
-
-<p class="definition">Definition at line <a class="el" href="CsvParser_8h_source.html#l00028">28</a> of file <a class="el" href="CsvParser_8h_source.html">CsvParser.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="CsvParser_8h_source.html#l00081">getReviewers()</a>, and <a class="el" href="CsvParser_8cpp_source.html#l00073">parse()</a>.</p>
 
 </div>
 </div>
@@ -595,10 +523,6 @@ The method identifies headers (e.g., Submissions) to switch states and determine
 
 <p>Helper set to ensure submission IDs are unique. </p>
 
-<p class="definition">Definition at line <a class="el" href="CsvParser_8h_source.html#l00031">31</a> of file <a class="el" href="CsvParser_8h_source.html">CsvParser.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="CsvParser_8cpp_source.html#l00073">parse()</a>.</p>
-
 </div>
 </div>
 <a id="ad06cbc3c5ca8a3863b6fec1a24bc3a1e" name="ad06cbc3c5ca8a3863b6fec1a24bc3a1e"></a>
@@ -623,24 +547,16 @@ The method identifies headers (e.g., Submissions) to switch states and determine
 
 <p>Collection of parsed submissions. </p>
 
-<p class="definition">Definition at line <a class="el" href="CsvParser_8h_source.html#l00027">27</a> of file <a class="el" href="CsvParser_8h_source.html">CsvParser.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="CsvParser_8h_source.html#l00075">getSubmissions()</a>, and <a class="el" href="CsvParser_8cpp_source.html#l00073">parse()</a>.</p>
-
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="CsvParser_8h_source.html">CsvParser.h</a></li>
-<li><a class="el" href="CsvParser_8cpp_source.html">CsvParser.cpp</a></li>
+<li>include/parser/<a class="el" href="CsvParser_8h_source.html">CsvParser.h</a></li>
+<li>src/parser/<a class="el" href="CsvParser_8cpp.html">CsvParser.cpp</a></li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="classCsvParser.html">CsvParser</a></li>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
 </body>
 </html>

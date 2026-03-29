@@ -1,0 +1,20 @@
+<map id="include/core/AssignmentEngine.h" name="include/core/AssignmentEngine.h">
+<area shape="rect" id="Node000001" title="Header file for the AssignmentEngine class." alt="" coords="332,5,571,31"/>
+<area shape="rect" id="Node000002" href="$OutputWriter_8h.html" title="Header file for the OutputWriter class." alt="" coords="191,79,391,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="414,39,319,81,316,76,412,34"/>
+<area shape="rect" id="Node000003" href="$Menu_8h.html" title="Header file for the Menu class." alt="" coords="15,152,152,177"/>
+<area shape="poly" id="edge7_Node000001_Node000003" title=" " alt="" coords="326,36,252,53,181,81,154,98,130,117,95,154,91,150,126,113,151,93,178,76,251,48,325,30"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html" title="Entry point for the Conference Assignment System." alt="" coords="153,225,259,251"/>
+<area shape="poly" id="edge10_Node000001_Node000004" title=" " alt="" coords="458,44,459,75,457,110,447,147,428,179,400,197,356,212,259,232,258,227,355,206,397,192,424,175,442,145,452,110,454,74,452,44"/>
+<area shape="rect" id="Node000007" href="$AssignmentEngine_8cpp.html" title="Implementation of the AssignmentEngine class." alt="" coords="488,79,713,104"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="489,34,577,76,575,81,486,39"/>
+<area shape="rect" id="Node000008" href="$RiskAnalyzer_8cpp.html" title="Implementation of the RiskAnalyzer class." alt="" coords="737,79,925,104"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="526,31,770,76,769,81,525,36"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="246,111,118,154,116,149,244,106"/>
+<area shape="poly" id="edge6_Node000002_Node000004" title=" " alt="" coords="258,113,236,131,218,153,211,171,207,191,207,225,202,225,202,190,205,170,213,151,232,127,255,109"/>
+<area shape="rect" id="Node000006" href="$OutputWriter_8cpp.html" title="Implementation of the OutputWriter class." alt="" coords="227,152,414,177"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="304,116,318,151,313,153,299,118"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="116,182,187,223,185,227,113,186"/>
+<area shape="rect" id="Node000005" href="$Menu_8cpp.html" title="Implementation of the Menu class." alt="" coords="5,225,129,251"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="80,191,73,226,67,225,75,190"/>
+</map>

@@ -32,62 +32,20 @@ void AssignmentEngine::initializeGraph() {
 }
 
 bool AssignmentEngine::isCompatible(const Reviewer& reviewer, const Submission& submission) const {
-    int mode = config.getGenerateAssignments();
-
-    // Mode 0 or 1: only primary expertise matches primary domain
-    if (mode <= 1) {
-        return reviewer.getPrimaryExpertise() == submission.getPrimaryTopic();
+    // According to T2.4, Modes 2 and 3 do not need to be implemented, 
+    // only the theoretical approach needs to be outlined in the presentation.
+    // Thus, we only implement Mode 0 and 1 (Primary Domains only).
+    
+    if (config.getGenerateAssignments() > 1) {
+        // Fallback to Primary-only since general mode isn't explicitly implemented here
     }
 
-    // Mode 2: primary expertise matches primary or secondary submission domain
-    if (mode == 2) {
-        if (reviewer.getPrimaryExpertise() == submission.getPrimaryTopic()) return true;
-        if (submission.getSecondaryTopic() != -1 &&
-            reviewer.getPrimaryExpertise() == submission.getSecondaryTopic()) return true;
-        return false;
-    }
-
-    // Mode 3: any expertise matches any domain
-    if (reviewer.getPrimaryExpertise() == submission.getPrimaryTopic()) return true;
-    if (submission.getSecondaryTopic() != -1 &&
-        reviewer.getPrimaryExpertise() == submission.getSecondaryTopic()) return true;
-    if (reviewer.getSecondaryExpertise() != -1 &&
-        reviewer.getSecondaryExpertise() == submission.getPrimaryTopic()) return true;
-    if (reviewer.getSecondaryExpertise() != -1 && submission.getSecondaryTopic() != -1 &&
-        reviewer.getSecondaryExpertise() == submission.getSecondaryTopic()) return true;
-
-    return false;
+    return reviewer.getPrimaryExpertise() == submission.getPrimaryTopic();
 }
 
 int AssignmentEngine::getMatchTopic(const Reviewer& reviewer, const Submission& submission) const {
-    int mode = config.getGenerateAssignments();
-
-    if (mode <= 1) {
-        return submission.getPrimaryTopic();
-    }
-
-    if (mode == 2) {
-        if (reviewer.getPrimaryExpertise() == submission.getPrimaryTopic())
-            return submission.getPrimaryTopic();
-        if (submission.getSecondaryTopic() != -1 &&
-            reviewer.getPrimaryExpertise() == submission.getSecondaryTopic())
-            return submission.getSecondaryTopic();
-    }
-
-    // Mode 3: check all combinations, prefer primary-primary match
-    if (reviewer.getPrimaryExpertise() == submission.getPrimaryTopic())
-        return submission.getPrimaryTopic();
-    if (submission.getSecondaryTopic() != -1 &&
-        reviewer.getPrimaryExpertise() == submission.getSecondaryTopic())
-        return submission.getSecondaryTopic();
-    if (reviewer.getSecondaryExpertise() != -1 &&
-        reviewer.getSecondaryExpertise() == submission.getPrimaryTopic())
-        return submission.getPrimaryTopic();
-    if (reviewer.getSecondaryExpertise() != -1 && submission.getSecondaryTopic() != -1 &&
-        reviewer.getSecondaryExpertise() == submission.getSecondaryTopic())
-        return submission.getSecondaryTopic();
-
-    return -1;
+    // Since only Primary Domains are considered, the match topic is always the primary topic.
+    return submission.getPrimaryTopic();
 }
 
 int AssignmentEngine::getReviewerNode(int reviewerIndex) const {

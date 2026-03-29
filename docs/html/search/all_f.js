@@ -14,6 +14,6 @@ var searchData=
   ['riskanalyzer_2ecpp_11',['RiskAnalyzer.cpp',['../RiskAnalyzer_8cpp.html',1,'']]],
   ['riskanalyzer_2eh_12',['RiskAnalyzer.h',['../RiskAnalyzer_8h.html',1,'']]],
   ['run_13',['run',['../classMenu.html#a35656cd130e24d69383a5c9d0a73a38c',1,'Menu']]],
-  ['runbatchmode_14',['runBatchMode',['../main_8cpp.html#af69b9c19ba7801236d32d342034b77d6',1,'main.cpp']]],
+  ['runbatchmode_14',['runBatchMode',['../main_8cpp.html#a627ce5ffbd8506bac4849dcd4b4dd929',1,'main.cpp']]],
   ['runriskanalysis_15',['runRiskAnalysis',['../classMenu.html#a6c73847c804569a69e49827e6bf81c8c',1,'Menu']]]
 ];

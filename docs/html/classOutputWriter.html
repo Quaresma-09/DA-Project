@@ -5,14 +5,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Conference Assignment System: OutputWriter Class Reference</title>
+<title>Conference Assignment Tool: OutputWriter Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -25,9 +21,8 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Conference Assignment System<span id="projectnumber">&#160;DA 2026 - Project 1</span>
+   <div id="projectname">Conference Assignment Tool
    </div>
-   <div id="projectbrief">Reviewer-Submission Assignment Tool using Max-Flow</div>
   </td>
  </tr>
  </tbody>
@@ -51,23 +46,6 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('classOutputWriter.html',''); initResizable(); });
-/* @license-end */
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -89,6 +67,7 @@ $(document).ready(function(){initNavTree('classOutputWriter.html',''); initResiz
 </div>
 </div>
 
+</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
@@ -104,21 +83,19 @@ $(document).ready(function(){initNavTree('classOutputWriter.html',''); initResiz
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a2f30761e75ee9a70bd3fa6e4319f646f" id="r_a2f30761e75ee9a70bd3fa6e4319f646f"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOutputWriter.html#a2f30761e75ee9a70bd3fa6e4319f646f">appendRiskAnalysis</a> (const std::string &amp;filename, const std::vector&lt; int &gt; &amp;criticalReviewers, int riskLevel)</td></tr>
-<tr class="memdesc:a2f30761e75ee9a70bd3fa6e4319f646f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends risk analysis results to an existing output file.  <br /></td></tr>
-<tr class="separator:a2f30761e75ee9a70bd3fa6e4319f646f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e97e3809e87ed184f719ee8c928e36c" id="r_a6e97e3809e87ed184f719ee8c928e36c"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOutputWriter.html#a6e97e3809e87ed184f719ee8c928e36c">writeAssignments</a> (const std::string &amp;filename, const std::vector&lt; <a class="el" href="structAssignment.html">Assignment</a> &gt; &amp;assignments, const std::vector&lt; <a class="el" href="structMissingReview.html">MissingReview</a> &gt; &amp;missingReviews)</td></tr>
 <tr class="memdesc:a6e97e3809e87ed184f719ee8c928e36c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes assignments and missing reviews to a CSV file.  <br /></td></tr>
 <tr class="separator:a6e97e3809e87ed184f719ee8c928e36c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a304ea813f1361d5e61f7ac1a527ae9d6" id="r_a304ea813f1361d5e61f7ac1a527ae9d6"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOutputWriter.html#a304ea813f1361d5e61f7ac1a527ae9d6">writeRiskAnalysis</a> (const std::string &amp;filename, const std::vector&lt; int &gt; &amp;criticalReviewers, int riskLevel)</td></tr>
 <tr class="memdesc:a304ea813f1361d5e61f7ac1a527ae9d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the risk analysis results to a file.  <br /></td></tr>
 <tr class="separator:a304ea813f1361d5e61f7ac1a527ae9d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f30761e75ee9a70bd3fa6e4319f646f" id="r_a2f30761e75ee9a70bd3fa6e4319f646f"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOutputWriter.html#a2f30761e75ee9a70bd3fa6e4319f646f">appendRiskAnalysis</a> (const std::string &amp;filename, const std::vector&lt; int &gt; &amp;criticalReviewers, int riskLevel)</td></tr>
+<tr class="memdesc:a2f30761e75ee9a70bd3fa6e4319f646f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends risk analysis results to an existing output file.  <br /></td></tr>
+<tr class="separator:a2f30761e75ee9a70bd3fa6e4319f646f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Writes assignment and risk analysis results to CSV files. </p>
 <p>Formats the output according to the project specification, including sorted assignment views and risk analysis reporting. </p>
-
-<p class="definition">Definition at line <a class="el" href="OutputWriter_8h_source.html#l00024">24</a> of file <a class="el" href="OutputWriter_8h_source.html">OutputWriter.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a2f30761e75ee9a70bd3fa6e4319f646f" name="a2f30761e75ee9a70bd3fa6e4319f646f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2f30761e75ee9a70bd3fa6e4319f646f">&#9670;&#160;</a></span>appendRiskAnalysis()</h2>
@@ -162,11 +139,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Appends risk analysis results to an existing output file. </p>
 <p>Used in batch mode to add risk analysis to the same output file.</p>
-<p>\par Complexity: O(C) </p>
-
-<p class="definition">Definition at line <a class="el" href="OutputWriter_8cpp_source.html#l00093">93</a> of file <a class="el" href="OutputWriter_8cpp_source.html">OutputWriter.cpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l00032">runBatchMode()</a>.</p>
+<p>@complexity O(C) </p>
 
 </div>
 </div>
@@ -212,10 +185,10 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Writes assignments and missing reviews to a CSV file. </p>
 <p>Output format follows Figures 2 and 3 of the specification:</p><ul>
-<li>SubmissionId,ReviewerId,Match (sorted by SubmissionId)</li>
-<li>ReviewerId,SubmissionId,Match (sorted by ReviewerId)</li>
-<li>Total: N</li>
-<li>SubmissionId,Domain,MissingReviews (if any, sorted)</li>
+<li>#SubmissionId,ReviewerId,Match (sorted by SubmissionId)</li>
+<li>#ReviewerId,SubmissionId,Match (sorted by ReviewerId)</li>
+<li>#Total: N</li>
+<li>#SubmissionId,Domain,MissingReviews (if any, sorted)</li>
 </ul>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -226,13 +199,7 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if successful, false otherwise.</dd></dl>
-<p>\par Complexity: O(A log A + M) where A = assignments, M = missing reviews. </p>
-
-<p class="definition">Definition at line <a class="el" href="OutputWriter_8cpp_source.html#l00011">11</a> of file <a class="el" href="OutputWriter_8cpp_source.html">OutputWriter.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="AssignmentEngine_8h_source.html#l00016">Assignment::reviewerId</a>, <a class="el" href="AssignmentEngine_8h_source.html#l00017">Assignment::submissionId</a>, and <a class="el" href="AssignmentEngine_8h_source.html#l00018">Assignment::topic</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="Menu_8cpp_source.html#l00114">Menu::generateAssignment()</a>, and <a class="el" href="main_8cpp_source.html#l00032">runBatchMode()</a>.</p>
+<p>@complexity O(A log A + M) where A = assignments, M = missing reviews. </p>
 
 </div>
 </div>
@@ -278,7 +245,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Writes the risk analysis results to a file. </p>
 <p>Output format follows Figure 4 of the specification:</p><ul>
-<li>Risk Analysis: M</li>
+<li>#Risk Analysis: M</li>
 <li>Sorted list of critical reviewer IDs</li>
 </ul>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -290,26 +257,18 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if successful, false otherwise.</dd></dl>
-<p>\par Complexity: O(C) where C = number of critical reviewers. </p>
-
-<p class="definition">Definition at line <a class="el" href="OutputWriter_8cpp_source.html#l00069">69</a> of file <a class="el" href="OutputWriter_8cpp_source.html">OutputWriter.cpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l00032">runBatchMode()</a>, and <a class="el" href="Menu_8cpp_source.html#l00168">Menu::runRiskAnalysis()</a>.</p>
+<p>@complexity O(C) where C = number of critical reviewers. </p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="OutputWriter_8h_source.html">OutputWriter.h</a></li>
-<li><a class="el" href="OutputWriter_8cpp_source.html">OutputWriter.cpp</a></li>
+<li>include/core/<a class="el" href="OutputWriter_8h_source.html">OutputWriter.h</a></li>
+<li>src/core/<a class="el" href="OutputWriter_8cpp.html">OutputWriter.cpp</a></li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="classOutputWriter.html">OutputWriter</a></li>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
 </body>
 </html>

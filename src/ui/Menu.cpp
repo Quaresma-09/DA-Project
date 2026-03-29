@@ -129,6 +129,11 @@ void Menu::generateAssignment() {
 
     std::cout << "\n--- Assignment Results ---" << std::endl;
     std::cout << "  Mode: " << config.getGenerateAssignments() << std::endl;
+    
+    if (config.getGenerateAssignments() > 1) {
+        std::cout << "  Note: Modes 2 and 3 are theoretical (T2.4). Computing using primary domains only." << std::endl;
+    }
+    
     std::cout << "  Computed flow: " << flow << " / " << required << std::endl;
 
     if (engine->hasValidAssignment()) {

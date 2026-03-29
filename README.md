@@ -72,4 +72,8 @@ Output will be in `docs/html/`.
 
 ## Authors
 
+- Diogo Afonso (up202406470)
+- Gonçalo Quaresma (up202407377)
+- Francisco Antunes (up202307639)
+
 DA 2026 — L.EIC016, FEUP

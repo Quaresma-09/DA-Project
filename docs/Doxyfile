@@ -1,0 +1,10 @@
+PROJECT_NAME           = "Conference Assignment Tool"
+OUTPUT_DIRECTORY       = docs
+INPUT                  = src include README.md
+USE_MDFILE_AS_MAINPAGE = README.md
+RECURSIVE              = YES
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+GENERATE_LATEX         = NO
+GENERATE_HTML          = YES
+OPTIMIZE_OUTPUT_FOR_C  = NO

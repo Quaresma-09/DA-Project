@@ -1,0 +1,29 @@
+<map id="include/graph/Graph.h" name="include/graph/Graph.h">
+<area shape="rect" id="Node000001" title="Header file for the Graph class and Edge struct." alt="" coords="498,5,663,31"/>
+<area shape="rect" id="Node000002" href="$AssignmentEngine_8h.html" title="Header file for the AssignmentEngine class." alt="" coords="332,152,571,177"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="536,39,505,56,479,80,468,98,461,117,455,152,449,151,456,116,463,96,475,77,502,52,533,34"/>
+<area shape="rect" id="Node000010" href="$MaxFlow_8h.html" title="Header file for the MaxFlow class." alt="" coords="489,79,673,104"/>
+<area shape="poly" id="edge12_Node000001_Node000010" title=" " alt="" coords="583,44,583,79,578,79,578,44"/>
+<area shape="rect" id="Node000012" href="$Graph_8cpp.html" title="Implementation of the Graph class and Edge struct." alt="" coords="697,79,849,104"/>
+<area shape="poly" id="edge15_Node000001_Node000012" title=" " alt="" coords="625,33,742,76,740,81,624,38"/>
+<area shape="rect" id="Node000003" href="$OutputWriter_8h.html" title="Header file for the OutputWriter class." alt="" coords="191,225,391,251"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="414,185,319,228,316,223,412,180"/>
+<area shape="rect" id="Node000004" href="$Menu_8h.html" title="Header file for the Menu class." alt="" coords="15,299,152,324"/>
+<area shape="poly" id="edge8_Node000002_Node000004" title=" " alt="" coords="326,182,252,200,181,228,154,244,130,264,95,301,91,297,126,260,151,240,178,223,251,195,325,177"/>
+<area shape="rect" id="Node000005" href="$main_8cpp.html" title="Entry point for the Conference Assignment System." alt="" coords="153,372,259,397"/>
+<area shape="poly" id="edge11_Node000002_Node000005" title=" " alt="" coords="458,191,459,221,457,257,447,294,428,326,400,344,356,358,259,378,258,373,355,353,397,339,424,322,442,292,452,256,454,221,452,191"/>
+<area shape="rect" id="Node000008" href="$AssignmentEngine_8cpp.html" title="Implementation of the AssignmentEngine class." alt="" coords="488,225,713,251"/>
+<area shape="poly" id="edge9_Node000002_Node000008" title=" " alt="" coords="489,181,577,223,575,228,486,186"/>
+<area shape="rect" id="Node000009" href="$RiskAnalyzer_8cpp.html" title="Implementation of the RiskAnalyzer class." alt="" coords="737,225,925,251"/>
+<area shape="poly" id="edge10_Node000002_Node000009" title=" " alt="" coords="526,177,770,223,769,228,525,182"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="246,258,118,301,116,296,244,253"/>
+<area shape="poly" id="edge7_Node000003_Node000005" title=" " alt="" coords="258,260,236,278,218,300,211,318,207,338,207,372,202,372,202,337,205,317,213,297,232,274,255,256"/>
+<area shape="rect" id="Node000007" href="$OutputWriter_8cpp.html" title="Implementation of the OutputWriter class." alt="" coords="227,299,414,324"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="304,263,318,298,313,300,299,265"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="116,328,187,369,185,374,113,333"/>
+<area shape="rect" id="Node000006" href="$Menu_8cpp.html" title="Implementation of the Menu class." alt="" coords="5,372,129,397"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="80,338,73,372,67,371,75,337"/>
+<area shape="poly" id="edge13_Node000010_Node000002" title=" " alt="" coords="549,113,474,154,471,149,546,108"/>
+<area shape="rect" id="Node000011" href="$MaxFlow_8cpp.html" title="Implementation of the Edmonds&#45;Karp maximum flow algorithm." alt="" coords="595,152,766,177"/>
+<area shape="poly" id="edge14_Node000010_Node000011" title=" " alt="" coords="609,110,666,150,663,154,606,114"/>
+</map>

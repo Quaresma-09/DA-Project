@@ -5,14 +5,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Conference Assignment System: Graph.h Source File</title>
+<title>Conference Assignment Tool: include/graph/Graph.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -25,9 +21,8 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Conference Assignment System<span id="projectnumber">&#160;DA 2026 - Project 1</span>
+   <div id="projectname">Conference Assignment Tool
    </div>
-   <div id="projectbrief">Reviewer-Submission Assignment Tool using Max-Flow</div>
   </td>
  </tr>
  </tbody>
@@ -56,23 +51,6 @@ $(function() {
 $(document).ready(function() { init_codefold(0); });
 /* @license-end */
 </script>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('Graph_8h_source.html',''); initResizable(); });
-/* @license-end */
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -94,6 +72,11 @@ $(document).ready(function(){initNavTree('Graph_8h_source.html',''); initResizab
 </div>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_8500bdfd3b26e2c9053a9d6b880ceba8.html">graph</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle"><div class="title">Graph.h</div></div>
 </div><!--header-->
@@ -136,25 +119,21 @@ $(document).ready(function(){initNavTree('Graph_8h_source.html',''); initResizab
 </div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassGraph_html"><div class="ttname"><a href="classGraph.html">Graph</a></div><div class="ttdoc">Directed graph implemented with adjacency lists.</div><div class="ttdef"><b>Definition</b> <a href="Graph_8h_source.html#l00047">Graph.h:47</a></div></div>
-<div class="ttc" id="aclassGraph_html_a09a4e3929f632c7e408e37bb7d1ea258"><div class="ttname"><a href="classGraph.html#a09a4e3929f632c7e408e37bb7d1ea258">Graph::addEdge</a></div><div class="ttdeci">void addEdge(int from, int to, int capacity)</div><div class="ttdoc">Adds a directed edge and its corresponding reverse edge.</div><div class="ttdef"><b>Definition</b> <a href="Graph_8cpp_source.html#l00015">Graph.cpp:15</a></div></div>
-<div class="ttc" id="aclassGraph_html_a15c333e8141f4bb72f6d40d03bf8e95f"><div class="ttname"><a href="classGraph.html#a15c333e8141f4bb72f6d40d03bf8e95f">Graph::getAdj</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; Edge &gt; &gt; &amp; getAdj()</div><div class="ttdoc">Returns a mutable reference to the adjacency list.</div><div class="ttdef"><b>Definition</b> <a href="Graph_8cpp_source.html#l00023">Graph.cpp:23</a></div></div>
-<div class="ttc" id="aclassGraph_html_a3346eef126453ec93f8f526d11047276"><div class="ttname"><a href="classGraph.html#a3346eef126453ec93f8f526d11047276">Graph::adj</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; Edge &gt; &gt; adj</div><div class="ttdoc">Adjacency list representation.</div><div class="ttdef"><b>Definition</b> <a href="Graph_8h_source.html#l00049">Graph.h:49</a></div></div>
-<div class="ttc" id="aclassGraph_html_a6539d03f6d3f42042196f0f79455bdd8"><div class="ttname"><a href="classGraph.html#a6539d03f6d3f42042196f0f79455bdd8">Graph::size</a></div><div class="ttdeci">int size() const</div><div class="ttdoc">Returns the number of vertices in the graph.</div><div class="ttdef"><b>Definition</b> <a href="Graph_8cpp_source.html#l00031">Graph.cpp:31</a></div></div>
-<div class="ttc" id="aclassGraph_html_ae4c72b8ac4d693c49800a4c7e273654f"><div class="ttname"><a href="classGraph.html#ae4c72b8ac4d693c49800a4c7e273654f">Graph::Graph</a></div><div class="ttdeci">Graph()</div><div class="ttdoc">Default constructor.</div></div>
-<div class="ttc" id="astructEdge_html"><div class="ttname"><a href="structEdge.html">Edge</a></div><div class="ttdoc">Represents a directed edge in the flow network.</div><div class="ttdef"><b>Definition</b> <a href="Graph_8h_source.html#l00022">Graph.h:22</a></div></div>
-<div class="ttc" id="astructEdge_html_a189258d91c07f4a0b76798cb7fe2b112"><div class="ttname"><a href="structEdge.html#a189258d91c07f4a0b76798cb7fe2b112">Edge::flow</a></div><div class="ttdeci">int flow</div><div class="ttdoc">Current flow through this edge.</div><div class="ttdef"><b>Definition</b> <a href="Graph_8h_source.html#l00025">Graph.h:25</a></div></div>
-<div class="ttc" id="astructEdge_html_a7848f67e4e8ccb97be14506164d7a267"><div class="ttname"><a href="structEdge.html#a7848f67e4e8ccb97be14506164d7a267">Edge::to</a></div><div class="ttdeci">int to</div><div class="ttdoc">Destination node of this edge.</div><div class="ttdef"><b>Definition</b> <a href="Graph_8h_source.html#l00023">Graph.h:23</a></div></div>
-<div class="ttc" id="astructEdge_html_ad606e57bc68898672de1727e299a7d65"><div class="ttname"><a href="structEdge.html#ad606e57bc68898672de1727e299a7d65">Edge::capacity</a></div><div class="ttdeci">int capacity</div><div class="ttdoc">Maximum capacity of this edge.</div><div class="ttdef"><b>Definition</b> <a href="Graph_8h_source.html#l00024">Graph.h:24</a></div></div>
-<div class="ttc" id="astructEdge_html_adf8a03cbd155c21e41ffed86ed1bb45b"><div class="ttname"><a href="structEdge.html#adf8a03cbd155c21e41ffed86ed1bb45b">Edge::rev</a></div><div class="ttdeci">int rev</div><div class="ttdoc">Index of the reverse edge in adj[to].</div><div class="ttdef"><b>Definition</b> <a href="Graph_8h_source.html#l00026">Graph.h:26</a></div></div>
+<div class="ttc" id="aclassGraph_html"><div class="ttname"><a href="classGraph.html">Graph</a></div><div class="ttdoc">Directed graph implemented with adjacency lists.</div><div class="ttdef"><b>Definition</b> Graph.h:47</div></div>
+<div class="ttc" id="aclassGraph_html_a09a4e3929f632c7e408e37bb7d1ea258"><div class="ttname"><a href="classGraph.html#a09a4e3929f632c7e408e37bb7d1ea258">Graph::addEdge</a></div><div class="ttdeci">void addEdge(int from, int to, int capacity)</div><div class="ttdoc">Adds a directed edge and its corresponding reverse edge.</div><div class="ttdef"><b>Definition</b> Graph.cpp:15</div></div>
+<div class="ttc" id="aclassGraph_html_a15c333e8141f4bb72f6d40d03bf8e95f"><div class="ttname"><a href="classGraph.html#a15c333e8141f4bb72f6d40d03bf8e95f">Graph::getAdj</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; Edge &gt; &gt; &amp; getAdj()</div><div class="ttdoc">Returns a mutable reference to the adjacency list.</div><div class="ttdef"><b>Definition</b> Graph.cpp:23</div></div>
+<div class="ttc" id="aclassGraph_html_a3346eef126453ec93f8f526d11047276"><div class="ttname"><a href="classGraph.html#a3346eef126453ec93f8f526d11047276">Graph::adj</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; Edge &gt; &gt; adj</div><div class="ttdoc">Adjacency list representation.</div><div class="ttdef"><b>Definition</b> Graph.h:49</div></div>
+<div class="ttc" id="aclassGraph_html_a6539d03f6d3f42042196f0f79455bdd8"><div class="ttname"><a href="classGraph.html#a6539d03f6d3f42042196f0f79455bdd8">Graph::size</a></div><div class="ttdeci">int size() const</div><div class="ttdoc">Returns the number of vertices in the graph.</div><div class="ttdef"><b>Definition</b> Graph.cpp:31</div></div>
+<div class="ttc" id="aclassGraph_html_ae4c72b8ac4d693c49800a4c7e273654f"><div class="ttname"><a href="classGraph.html#ae4c72b8ac4d693c49800a4c7e273654f">Graph::Graph</a></div><div class="ttdeci">Graph()</div><div class="ttdoc">Default constructor. Creates an empty graph.</div></div>
+<div class="ttc" id="astructEdge_html"><div class="ttname"><a href="structEdge.html">Edge</a></div><div class="ttdoc">Represents a directed edge in the flow network.</div><div class="ttdef"><b>Definition</b> Graph.h:22</div></div>
+<div class="ttc" id="astructEdge_html_a189258d91c07f4a0b76798cb7fe2b112"><div class="ttname"><a href="structEdge.html#a189258d91c07f4a0b76798cb7fe2b112">Edge::flow</a></div><div class="ttdeci">int flow</div><div class="ttdoc">Current flow through this edge.</div><div class="ttdef"><b>Definition</b> Graph.h:25</div></div>
+<div class="ttc" id="astructEdge_html_a7848f67e4e8ccb97be14506164d7a267"><div class="ttname"><a href="structEdge.html#a7848f67e4e8ccb97be14506164d7a267">Edge::to</a></div><div class="ttdeci">int to</div><div class="ttdoc">Destination node of this edge.</div><div class="ttdef"><b>Definition</b> Graph.h:23</div></div>
+<div class="ttc" id="astructEdge_html_ad606e57bc68898672de1727e299a7d65"><div class="ttname"><a href="structEdge.html#ad606e57bc68898672de1727e299a7d65">Edge::capacity</a></div><div class="ttdeci">int capacity</div><div class="ttdoc">Maximum capacity of this edge.</div><div class="ttdef"><b>Definition</b> Graph.h:24</div></div>
+<div class="ttc" id="astructEdge_html_adf8a03cbd155c21e41ffed86ed1bb45b"><div class="ttname"><a href="structEdge.html#adf8a03cbd155c21e41ffed86ed1bb45b">Edge::rev</a></div><div class="ttdeci">int rev</div><div class="ttdoc">Index of the reverse edge in adj[to].</div><div class="ttdef"><b>Definition</b> Graph.h:26</div></div>
 </div><!-- fragment --></div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_8500bdfd3b26e2c9053a9d6b880ceba8.html">graph</a></li><li class="navelem"><a class="el" href="Graph_8h.html">Graph.h</a></li>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
 </body>
 </html>

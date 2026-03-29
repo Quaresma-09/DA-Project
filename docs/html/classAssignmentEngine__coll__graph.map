@@ -1,0 +1,9 @@
+<map id="AssignmentEngine" name="AssignmentEngine">
+<area shape="rect" id="Node000001" title="Builds and solves the reviewer assignment problem using max&#45;flow." alt="" coords="52,93,195,119"/>
+<area shape="rect" id="Node000002" href="$classConfig.html" title="Manages global configuration settings for the conference assignment system." alt="" coords="5,5,68,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="53,40,76,67,106,91,103,95,72,71,49,44"/>
+<area shape="rect" id="Node000003" href="$classGraph.html" title="Directed graph implemented with adjacency lists." alt="" coords="93,5,154,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="126,45,126,93,121,93,121,45"/>
+<area shape="rect" id="Node000004" href="$classMaxFlow.html" title="Implements the Edmonds&#45;Karp algorithm for maximum flow." alt="" coords="179,5,260,31"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="201,43,172,71,141,95,138,91,168,67,198,39"/>
+</map>
