@@ -42,6 +42,17 @@
 
 .idea/
 
+# CMake / CLion build artifacts
+build/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+compile_commands.json
+CTestTestfile.cmake
+Testing/
+
 # macOS
 .DS_Store
 
